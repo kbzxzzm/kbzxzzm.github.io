@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>This Is My Blog About Code - 浮雨博客</title>
+    <title>2.6.1 npm init - 浮雨博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="This is my bloghey welcome Floating Rain Blogshell scripts:
-1234567891011import React, &amp;#123; Compo,"> 
+    <meta name="description" content="使用 npm init 初始化一个空项目是一个好的习惯，即使你对 package.json 及其他属性非常熟悉，npm init 也是你开始写新的 Node.js 应用或模块的一个快捷的办法。npm,"> 
     <meta name="author" content="Floating Rain"> 
     <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -44,7 +43,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">This Is My Blog About Code</h3>
+        <h3 class="subtitle">2.6.1 npm init</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -76,22 +75,22 @@
                 
                 <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
                 
-                January 30, 2020
+                January 31, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/blog/" title="This Is My Blog About Code">This Is My Blog About Code</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/2.6 npm 使用注意事项/" title="2.6.1 npm init">2.6.1 npm init</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    1.4k
+                    4.1k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    1 mins.
+                    4 mins.
                 </span>
                 
                 
@@ -123,12 +122,47 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="This-is-my-blog"><a href="#This-is-my-blog" class="headerlink" title="This is my blog"></a>This is my blog</h1><h2 id="hey-welcome-Floating-Rain-Blog"><a href="#hey-welcome-Floating-Rain-Blog" class="headerlink" title="hey welcome Floating Rain Blog"></a>hey welcome Floating Rain Blog</h2><p>shell scripts:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from 'react'</span><br><span class="line"></span><br><span class="line">export default class 博客问题以及解决方案 extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <p>使用 <code>npm init</code> 初始化一个空项目是一个好的习惯，即使你对 package.json 及其他属性非常熟悉，<code>npm init</code> 也是你开始写新的 Node.js 应用或模块的一个快捷的办法。<code>npm init</code> 有智能的默认选项，比如从根目录名称推断模块名称，通过 <code>~/.npmrc</code> 读取你的信息，用你的 Git 设置来确定 repository 等等。</p>
+<h2 id="2-6-2-npm-install"><a href="#2-6-2-npm-install" class="headerlink" title="2.6.2 npm install"></a>2.6.2 npm install</h2><p><code>npm install</code> 是我们最常用的 npm 命令之一，因此我们需要好好了解下这个命令。终端输入 <code>npm install -h</code> 查看使用方式:</p>
+<p><img src="./img/2.6.1.png" alt></p>
+<p>可以看出：我们通过 <code>npm install</code> 可以安装 npm 上发布的某个版本、某个tag、某个版本区间的模块，甚至可以安装本地目录、压缩包和 git/github 的库作为依赖。</p>
 <blockquote>
-<p>I don’t know some one before</p>
+<p>小提示: <code>npm i</code> 是 <code>npm install</code> 的简写，建议使用 <code>npm i</code>。</p>
 </blockquote>
+<p>直接使用 <code>npm i</code> 安装的模块是不会写入 package.json 的 dependencies (或 devDependencies)，需要额外加个参数:</p>
+<ol>
+<li><code>npm i express --save</code>/<code>npm i express -S</code> (安装 express，同时将 <code>&quot;express&quot;: &quot;^4.14.0&quot;</code> 写入 dependencies )</li>
+<li><code>npm i express --save-dev</code>/<code>npm i express -D</code> (安装 express，同时将 <code>&quot;express&quot;: &quot;^4.14.0&quot;</code> 写入 devDependencies )</li>
+<li><code>npm i express --save --save-exact</code> (安装 express，同时将 <code>&quot;express&quot;: &quot;4.14.0&quot;</code> 写入 dependencies )</li>
+</ol>
+<p>第三种方式将固定版本号写入 dependencies，建议线上的 Node.js 应用都采取这种锁定版本号的方式，因为你不可能保证第三方模块下个小版本是没有验证 bug 的，即使是很流行的模块。拿 Mongoose 来说，Mongoose 4.1.4 引入了一个 bug 导致调用一个文档 entry 的 remove 会删除整个集合的文档，见：<a href="https://github.com/Automattic/mongoose/blob/master/History.md#415--2015-09-01" target="_blank" rel="noopener">https://github.com/Automattic/mongoose/blob/master/History.md#415–2015-09-01</a>。</p>
+<blockquote>
+<p>后面会介绍更安全的 <code>npm shrinkwrap</code> 的用法。</p>
+</blockquote>
+<p>运行以下命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> save-exact <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>这样每次 <code>npm i xxx --save</code> 的时候会锁定依赖的版本号，相当于加了 <code>--save-exact</code> 参数。</p>
+<blockquote>
+<p>小提示：<code>npm config set</code> 命令将配置写到了 ~/.npmrc 文件，运行 <code>npm config list</code> 查看。</p>
+</blockquote>
+<h2 id="2-6-3-npm-scripts"><a href="#2-6-3-npm-scripts" class="headerlink" title="2.6.3 npm scripts"></a>2.6.3 npm scripts</h2><p>npm 提供了灵活而强大的 scripts 功能，见 <a href="https://docs.npmjs.com/misc/scripts" target="_blank" rel="noopener">官方文档</a>。</p>
+<p>npm 的 scripts 有一些内置的缩写命令，如常用的：</p>
+<ul>
+<li><code>npm start</code> 等价于 <code>npm run start</code> </li>
+<li><code>npm test</code> 等价于 <code>npm run test</code> </li>
+</ul>
+<h2 id="2-6-4-npm-shrinkwrap"><a href="#2-6-4-npm-shrinkwrap" class="headerlink" title="2.6.4 npm shrinkwrap"></a>2.6.4 npm shrinkwrap</h2><p>前面说过要锁定依赖的版本，但这并不能完全防止意外情况的发生，因为锁定的只是最外一层的依赖，而里层依赖的模块的 package.json 有可能写的是 <code>&quot;mongoose&quot;: &quot;*&quot;</code>。为了彻底锁定依赖的版本，让你的应用在任何机器上安装的都是同样版本的模块（不管嵌套多少层），通过运行 <code>npm shrinkwrap</code>，会在当前目录下产生一个 <code>npm-shrinkwrap.json</code>，里面包含了通过 node_modules 计算出的模块的依赖树及版本。上面的截图也显示：只要目录下有 npm-shrinkwrap.json 则运行 <code>npm install</code> 的时候会优先使用 npm-shrinkwrap.json 进行安装，没有则使用 package.json 进行安装。</p>
+<p>更多阅读：</p>
+<ol>
+<li><a href="https://docs.npmjs.com/cli/shrinkwrap" target="_blank" rel="noopener">https://docs.npmjs.com/cli/shrinkwrap</a></li>
+<li><a href="http://tech.meituan.com/npm-shrinkwrap.html" target="_blank" rel="noopener">http://tech.meituan.com/npm-shrinkwrap.html</a></li>
+</ol>
+<blockquote>
+<p>注意: 如果 node_modules 下存在某个模块（如直接通过 <code>npm install xxx</code> 安装的）而 package.json 中没有，运行 <code>npm shrinkwrap</code> 则会报错。另外，<code>npm shrinkwrap</code> 只会生成 dependencies 的依赖，不会生成 devDependencies 的。</p>
+</blockquote>
+<p>上一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/2.5%20package.json.md" target="_blank" rel="noopener">2.5 packge.json</a></p>
+<p>下一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/3.1%20%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%80%E4%B8%AA%20Express%20%E9%A1%B9%E7%9B%AE.md" target="_blank" rel="noopener">3.1 初始化一个 Express 项目</a></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -187,7 +221,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#This-is-my-blog"><span class="toc-number">1.</span> <span class="toc-text">This is my blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hey-welcome-Floating-Rain-Blog"><span class="toc-number">1.1.</span> <span class="toc-text">hey welcome Floating Rain Blog</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-2-npm-install"><span class="toc-number">1.</span> <span class="toc-text">2.6.2 npm install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-3-npm-scripts"><span class="toc-number">2.</span> <span class="toc-text">2.6.3 npm scripts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-4-npm-shrinkwrap"><span class="toc-number">3.</span> <span class="toc-text">2.6.4 npm shrinkwrap</span></a></li></ol>
                 </div>
             </div>
             

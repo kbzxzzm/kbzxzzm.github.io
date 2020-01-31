@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="ch" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>页面设计 - 浮雨博客</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="我们使用 jQuery + Semantic-UI 实现前端页面的设计，最终效果图如下:
+注册页
+
+登录页
+
+未登录时的主页（或用户页）
+
+登录后的主页（或用户页）
+
+发表文章页
+
+编辑文章页
+
+未,"> 
+    <meta name="author" content="Floating Rain"> 
+    <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+    <link rel="stylesheet" href="/css/obsidian.css">
+    <link rel="stylesheet" href="/css/ball-atom.min.css">
+</head>
+</html>
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">浮雨博客</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">页面设计</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg);">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+                
+                January 31, 2020
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.5 页面设计/" title="页面设计">页面设计</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    25k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    23 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <p>我们使用 jQuery + Semantic-UI 实现前端页面的设计，最终效果图如下:</p>
+<p><strong>注册页</strong></p>
+<p><img src="./img/4.5.1.png" alt></p>
+<p><strong>登录页</strong></p>
+<p><img src="./img/4.5.2.png" alt></p>
+<p><strong>未登录时的主页（或用户页）</strong></p>
+<p><img src="./img/4.5.3.png" alt></p>
+<p><strong>登录后的主页（或用户页）</strong></p>
+<p><img src="./img/4.5.4.png" alt></p>
+<p><strong>发表文章页</strong></p>
+<p><img src="./img/4.5.5.png" alt></p>
+<p><strong>编辑文章页</strong></p>
+<p><img src="./img/4.5.6.png" alt></p>
+<p><strong>未登录时的文章页</strong></p>
+<p><img src="./img/4.5.7.png" alt></p>
+<p><strong>登录后的文章页</strong></p>
+<p><img src="./img/4.5.8.png" alt></p>
+<p><strong>通知</strong></p>
+<p><img src="./img/4.5.9.png" alt><br><img src="./img/4.5.10.png" alt><br><img src="./img/4.5.11.png" alt></p>
+<h2 id="4-5-1-组件"><a href="#4-5-1-组件" class="headerlink" title="4.5.1 组件"></a>4.5.1 组件</h2><p>前面提到过，我们可以将模板拆分成一些组件，然后使用 ejs 的 include 方法将组件组合起来进行渲染。我们将页面切分成以下组件：</p>
+<p><strong>主页</strong></p>
+<p><img src="./img/4.5.12.png" alt></p>
+<p><strong>文章页</strong></p>
+<p><img src="./img/4.5.13.png" alt></p>
+<p>根据上面的组件切分图，我们创建以下样式及模板文件：</p>
+<p><strong>public/css/style.css</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ---------- 全局样式 ---------- */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1100px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</span><br><span class="line">  <span class="attribute">padding-top</span>: <span class="number">40px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">3px</span> solid <span class="number">#4fc08d</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.button</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#4fc08d</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.avatar</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">48px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">48px</span>;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ---------- nav ---------- */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav</span> &#123;</span><br><span class="line">  <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#999</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav</span> <span class="selector-tag">h1</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#4fc08d</span>;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ---------- nav-setting ---------- */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav-setting</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">35px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">999</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav-setting</span> <span class="selector-class">.ui</span><span class="selector-class">.dropdown</span><span class="selector-class">.button</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">10px</span> <span class="number">0</span> <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav-setting</span> <span class="selector-class">.icon</span><span class="selector-class">.bars</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#000</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">18px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* ---------- post-content ---------- */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.post-content</span> <span class="selector-tag">h3</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#4fc08d</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.post-content</span> <span class="selector-class">.tag</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">13px</span>;</span><br><span class="line">  <span class="attribute">margin-right</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#999</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.post-content</span> <span class="selector-class">.tag</span><span class="selector-class">.right</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">  <span class="attribute">margin-right</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.post-content</span> <span class="selector-class">.tag</span><span class="selector-class">.right</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#999</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>views/header.ejs</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;%= blog.title %&gt;&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css&quot;&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/style.css&quot;&gt;</span><br><span class="line">    &lt;script src=&quot;//cdn.bootcss.com/jquery/1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;/head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">  &lt;%- include(&apos;components/nav&apos;) %&gt;</span><br><span class="line">  &lt;%- include(&apos;components/nav-setting&apos;) %&gt;</span><br><span class="line">  &lt;%- include(&apos;components/notification&apos;) %&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>views/footer.ejs</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">   $(document).ready(function () &#123;</span><br><span class="line">      // 点击按钮弹出下拉框</span><br><span class="line">      $(&apos;.ui.dropdown&apos;).dropdown();</span><br><span class="line">      </span><br><span class="line">      // 鼠标悬浮在头像上，弹出气泡提示框</span><br><span class="line">      $(&apos;.post-content .avatar-link&apos;).popup(&#123;</span><br><span class="line">        inline: true,</span><br><span class="line">        position: &apos;bottom right&apos;,</span><br><span class="line">        lastResort: &apos;bottom right&apos;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">  &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：上面 <code>&lt;script&gt;&lt;/script&gt;</code> 是 semantic-ui 操控页面控件的代码，一定要放到 footer.ejs 的 <code>&lt;/body&gt;</code> 的前面，因为只有页面加载完后才能通过 JQuery 获取 DOM 元素。</p>
+</blockquote>
+<p>在 views 目录下新建 components 目录用来存放组件（即可以复用的模板片段），在该目录下创建以下文件：</p>
+<p><strong>views/components/nav.ejs</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;nav&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;ui grid&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;four wide column&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;div class=&quot;eight wide column&quot;&gt;</span><br><span class="line">      &lt;a href=&quot;/posts&quot;&gt;&lt;h1&gt;&lt;%= blog.title %&gt;&lt;/h1&gt;&lt;/a&gt;</span><br><span class="line">      &lt;p&gt;&lt;%= blog.description %&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>views/components/nav-setting.ejs</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;nav-setting&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;ui buttons&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;ui floating dropdown button&quot;&gt;</span><br><span class="line">      &lt;i class=&quot;icon bars&quot;&gt;&lt;/i&gt;</span><br><span class="line">      &lt;div class=&quot;menu&quot;&gt;</span><br><span class="line">        &lt;% if (user) &#123; %&gt;</span><br><span class="line">          &lt;a class=&quot;item&quot; href=&quot;/posts?author=&lt;%= user._id %&gt;&quot;&gt;个人主页&lt;/a&gt;</span><br><span class="line">          &lt;div class=&quot;divider&quot;&gt;&lt;/div&gt;</span><br><span class="line">          &lt;a class=&quot;item&quot; href=&quot;/posts/create&quot;&gt;发表文章&lt;/a&gt;</span><br><span class="line">          &lt;a class=&quot;item&quot; href=&quot;/signout&quot;&gt;登出&lt;/a&gt;</span><br><span class="line">        &lt;% &#125; else &#123; %&gt;</span><br><span class="line">          &lt;a class=&quot;item&quot; href=&quot;/signin&quot;&gt;登录&lt;/a&gt;</span><br><span class="line">          &lt;a class=&quot;item&quot; href=&quot;/signup&quot;&gt;注册&lt;/a&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>views/components/notification.ejs</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;ui grid&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;four wide column&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;eight wide column&quot;&gt;</span><br><span class="line"></span><br><span class="line">  &lt;% if (success) &#123; %&gt;</span><br><span class="line">    &lt;div class=&quot;ui success message&quot;&gt;</span><br><span class="line">      &lt;p&gt;&lt;%= success %&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">  &lt;% if (error) &#123; %&gt;</span><br><span class="line">    &lt;div class=&quot;ui error message&quot;&gt;</span><br><span class="line">      &lt;p&gt;&lt;%= error %&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;% &#125; %&gt;</span><br><span class="line"></span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-5-2-app-locals-和-res-locals"><a href="#4-5-2-app-locals-和-res-locals" class="headerlink" title="4.5.2 app.locals 和 res.locals"></a>4.5.2 app.locals 和 res.locals</h2><p>上面的 ejs 模板中我们用到了 blog、user、success、error 变量，我们将 blog 变量挂载到 <code>app.locals</code> 下，将 user、success、error 挂载到 <code>res.locals</code> 下。为什么要这么做呢？<code>app.locals</code> 和 <code>res.locals</code> 是什么？它们有什么区别？</p>
+<p>express 中有两个对象可用于模板的渲染：<code>app.locals</code> 和 <code>res.locals</code>。我们从 express 源码一探究竟：</p>
+<p><strong>express/lib/application.js</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">app.render = <span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params">name, options, callback</span>) </span>&#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">var</span> opts = options;</span><br><span class="line">  <span class="keyword">var</span> renderOptions = &#123;&#125;;</span><br><span class="line">  ...</span><br><span class="line">  <span class="comment">// merge app.locals</span></span><br><span class="line">  merge(renderOptions, <span class="keyword">this</span>.locals);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// merge options._locals</span></span><br><span class="line">  <span class="keyword">if</span> (opts._locals) &#123;</span><br><span class="line">    merge(renderOptions, opts._locals);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// merge options</span></span><br><span class="line">  merge(renderOptions, opts);</span><br><span class="line">  ...</span><br><span class="line">  tryRender(view, renderOptions, done);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>express/lib/response.js</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">res.render = <span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params">view, options, callback</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> app = <span class="keyword">this</span>.req.app;</span><br><span class="line">  <span class="keyword">var</span> opts = options || &#123;&#125;;</span><br><span class="line">  ...</span><br><span class="line">  <span class="comment">// merge res.locals</span></span><br><span class="line">  opts._locals = self.locals;</span><br><span class="line">  ...</span><br><span class="line">  <span class="comment">// render</span></span><br><span class="line">  app.render(view, opts, done);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>可以看出：在调用 <code>res.render</code> 的时候，express 合并（merge）了 3 处的结果后传入要渲染的模板，优先级：<code>res.render</code> 传入的对象&gt; <code>res.locals</code> 对象 &gt; <code>app.locals</code> 对象，所以 <code>app.locals</code> 和 <code>res.locals</code> 几乎没有区别，都用来渲染模板，使用上的区别在于：<code>app.locals</code> 上通常挂载常量信息（如博客名、描述、作者这种不会变的信息），<code>res.locals</code> 上通常挂载变量信息，即每次请求可能的值都不一样（如请求者信息，<code>res.locals.user = req.session.user</code>）。</p>
+<p>修改 index.js，在 <code>routes(app)</code> 上一行添加如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置模板全局常量</span></span><br><span class="line">app.locals.blog = &#123;</span><br><span class="line">  title: pkg.name,</span><br><span class="line">  description: pkg.description</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加模板必需的三个变量</span></span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">  res.locals.user = req.session.user</span><br><span class="line">  res.locals.success = req.flash(<span class="string">'success'</span>).toString()</span><br><span class="line">  res.locals.error = req.flash(<span class="string">'error'</span>).toString()</span><br><span class="line">  next()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>这样在调用 <code>res.render</code> 的时候就不用传入这四个变量了，express 为我们自动 merge 并传入了模板，所以我们可以在模板中直接使用这四个变量。</p>
+<p>上一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/4.4%20%E5%8A%9F%E8%83%BD%E8%AE%BE%E8%AE%A1.md" target="_blank" rel="noopener">4.4 功能设计</a></p>
+<p>下一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/4.6%20%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93.md" target="_blank" rel="noopener">4.6 连接数据库</a></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="true">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/Kenny G-Right here waiting.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='ec894e2b66f752e8b7fb'
+        data-cs='3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
+        data-r='blog-comments'
+        data-o='FloatingRain'
+        data-a='FloatingRain'
+        data-d=''
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
+                    <p>Floating Rain</p>
+                    <span>Floating Rain Blog</span>
+                    <dl>
+                        <dd><a href="https://github.com/TriDiamond" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="https://twitter.com/TriDiamond6" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="https://stackoverflow.com/users/7602324/tridiamond?tab=profile" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">29 <p>Articles</p></a></li>
+                    <li><a href="/categories">1 <p>Categories</p></a></li>
+                    <li><a href="/tags">1 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-1-组件"><span class="toc-number">1.</span> <span class="toc-text">4.5.1 组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-2-app-locals-和-res-locals"><span class="toc-number">2.</span> <span class="toc-text">4.5.2 app.locals 和 res.locals</span></a></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2020
+        <span class="gradient-text">
+            Floating Rain
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.3" target="_blank" rel="noopener">v1.4.3</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+    <script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+
+
+
+    <script src="/js/busuanzi.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ($('span[id^="busuanzi_"]').length) {
+                initialBusuanzi();
+            }
+        });
+    </script>
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-149874671-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149874671-1');
+    </script>
+
+
+
+
+
+<script>
+    function initialTyped () {
+        var typedTextEl = $('.typed-text');
+        if (typedTextEl && typedTextEl.length > 0) {
+            var typed = new Typed('.typed-text', {
+                strings: ["Floating Rain Blog", "浮  雨  个  人  博  客"],
+                typeSpeed: 90,
+                loop: true,
+                loopCount: Infinity,
+                backSpeed: 20,
+            });
+        }
+    }
+
+    if ($('.article-header') && $('.article-header').length) {
+        $(document).ready(function () {
+            initialTyped();
+        });
+    }
+</script>
+
+
+
+
+</html>

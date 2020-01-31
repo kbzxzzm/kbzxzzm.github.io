@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>This Is My Blog About Code - 浮雨博客</title>
+    <title>1.2.1 安装与启动 MongoDB - 浮雨博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="This is my bloghey welcome Floating Rain Blogshell scripts:
-1234567891011import React, &amp;#123; Compo,"> 
+    <meta name="description" content="
+Windows 用户向导：https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+Linux 用户向导：https,"> 
     <meta name="author" content="Floating Rain"> 
     <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -44,7 +45,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">This Is My Blog About Code</h3>
+        <h3 class="subtitle">1.2.1 安装与启动 MongoDB</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -76,22 +77,22 @@
                 
                 <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
                 
-                January 30, 2020
+                January 31, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/blog/" title="This Is My Blog About Code">This Is My Blog About Code</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/1.2 MongoDB 的安装与使用/" title="1.2.1 安装与启动 MongoDB">1.2.1 安装与启动 MongoDB</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    1.4k
+                    2.5k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    1 mins.
+                    2 mins.
                 </span>
                 
                 
@@ -123,12 +124,29 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="This-is-my-blog"><a href="#This-is-my-blog" class="headerlink" title="This is my blog"></a>This is my blog</h1><h2 id="hey-welcome-Floating-Rain-Blog"><a href="#hey-welcome-Floating-Rain-Blog" class="headerlink" title="hey welcome Floating Rain Blog"></a>hey welcome Floating Rain Blog</h2><p>shell scripts:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from 'react'</span><br><span class="line"></span><br><span class="line">export default class 博客问题以及解决方案 extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <ul>
+<li>Windows 用户向导：<a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/</a></li>
+<li>Linux 用户向导：<a href="https://docs.mongodb.com/manual/administration/install-on-linux/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/administration/install-on-linux/</a></li>
+<li>Mac 用户向导：<a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/</a></li>
+</ul>
+<h2 id="1-2-2-Robomongo-和-Mongochef"><a href="#1-2-2-Robomongo-和-Mongochef" class="headerlink" title="1.2.2 Robomongo 和 Mongochef"></a>1.2.2 Robomongo 和 Mongochef</h2><h4 id="Robomongo"><a href="#Robomongo" class="headerlink" title="Robomongo"></a>Robomongo</h4><p><a href="https://robomongo.org/" target="_blank" rel="noopener">Robomongo</a> 是一个基于 Shell 的跨平台开源 MongoDB 可视化管理工具，支持 Windows、Linux 和 Mac，嵌入了 JavaScript 引擎和 MongoDB mongo，只要你会使用 mongo shell，你就会使用 Robomongo，它还提供了语法高亮、自动补全、差别视图等。</p>
+<p><a href="https://robomongo.org/download" target="_blank" rel="noopener">Robomongo 下载地址</a></p>
+<p>下载并安装成功后点击左上角的 <code>Create</code> 创建一个连接，给该连接起个名字如: <code>localhost</code>，使用默认地址（localhost）和端口（27017）即可，点击 <code>Save</code> 保存。</p>
+<p><img src="./img/1.2.1.png" alt></p>
+<p>双击 <code>localhost</code> 连接到 MongoDB 并进入交互界面，尝试插入一条数据并查询出来，如下所示:</p>
+<p><img src="./img/1.2.2.png" alt></p>
+<h4 id="MongoChef"><a href="#MongoChef" class="headerlink" title="MongoChef"></a>MongoChef</h4><p><a href="http://3t.io/mongochef/" target="_blank" rel="noopener">MongoChef</a> 是另一款强大的 MongoDB 可视化管理工具，支持 Windows、Linux 和 Mac。</p>
+<p><a href="http://3t.io/mongochef/#mongochef-download-compare" target="_blank" rel="noopener">MongoChef 下载地址</a>，我们选择左侧的非商业用途的免费版下载。</p>
+<p><img src="./img/1.2.3.png" alt></p>
+<p>安装成功后跟 Robomongo 一样，也需要创建一个新的连接的配置，成功后双击进入到 MongoChef 主页面，如下所示:</p>
+<p><img src="./img/1.2.4.png" alt></p>
+<p>还可以使用 shell 模式:</p>
+<p><img src="./img/1.2.5.png" alt></p>
 <blockquote>
-<p>I don’t know some one before</p>
+<p>小提示: MongoChef 相较于 Robomongo 更强大一些，但 Robomongo 比较轻量也能满足大部分的常规需求，所以哪一个适合自己还需读者自行尝试。</p>
 </blockquote>
+<p>上一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/1.1%20Node.js%20%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8.md" target="_blank" rel="noopener">1.1 Node.js 的安装与使用</a></p>
+<p>下一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/2.1%20require.md" target="_blank" rel="noopener">2.1 require</a></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -187,7 +205,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#This-is-my-blog"><span class="toc-number">1.</span> <span class="toc-text">This is my blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hey-welcome-Floating-Rain-Blog"><span class="toc-number">1.1.</span> <span class="toc-text">hey welcome Floating Rain Blog</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-2-Robomongo-和-Mongochef"><span class="toc-number">1.</span> <span class="toc-text">1.2.2 Robomongo 和 Mongochef</span></a></li></ol>
                 </div>
             </div>
             

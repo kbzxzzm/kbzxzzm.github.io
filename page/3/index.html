@@ -126,19 +126,19 @@
             January 31, 2020
         </p>
         <h3 class="post-title animated fadeInDown">
-            <a href="/2020/01/31/2.2 exports 和 module.exports/" title="exports和module,exports" class="posttitle">exports和module,exports</a></h3>
+            <a href="/2020/01/31/3.2 路由/" title="路由" class="posttitle">路由</a></h3>
         
         <p class="post-count animated fadeInDown">
             
             <span>
                 <b class="iconfont icon-text2"></b> <i>Words count</i>
-                4.2k
+                7.3k
             </span>
             
             
             <span>
                 <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                4 mins.
+                7 mins.
             </span>
             
             
@@ -147,10 +147,10 @@
         
         <div class="md-content animated fadeIn">
             
-            <p>require 用来加载代码，而 exports 和 module.exports 则用来导出代码。</p>
-<p>很多新手可能会迷惑于 exports 和 module.exports 的区别，为了更好的理解 exports...</p>
+            <p>前面我们只是挂载了根路径的路由控制器，现在修改 index.js 如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">const</span> app = express...</span></pre></td></tr></table></figure>
             
-            <span class="read-more"><a href="/2020/01/31/2.2 exports 和 module.exports/" title="Read article" class="posttitle">Read article</a>
+            <span class="read-more"><a href="/2020/01/31/3.2 路由/" title="Read article" class="posttitle">Read article</a>
                 <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
@@ -184,19 +184,19 @@
             
             January 31, 2020
         </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/2.1 require/" title="require 用来加载一个文件的代码，关于 require 的机制这里不展开讲解，请仔细阅读 [官方文档](https://nodejs.org/api/modules.html)。" class="posttitle">require 用来加载一个文件的代码，关于 require 的机制这里不展开讲解，请仔细阅读 [官方文档](https://nodejs.org/api/modules.html)。</a></h3>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/3.2 路由/" title="路由" class="posttitle">路由</a></h3>
         
             <p class="post-count animated fadeInDown">
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        3k
+                        7.3k
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        3 mins.
+                        7 mins.
                     </span>
                 
                 
@@ -205,20 +205,10 @@
         
         <div class="md-content animated fadeIn">
             
-                <p>简单概括以下几点:</p>
-<ul>
-<li>require 可加载 .js、.json 和 .node 后缀的文件</li>
-<li>require 的过程是同步的，所以这样是错误的:<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">  module.exports = &#123; a: <span class="string">'hello'</span> &#125;</span><br><span class="line">&#125;, 0)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>require 这个文件得到的是空对象 <code>{}</code></p>
-<ul>
-<li>require 目录的机制是:<ul>
-<li>如果目录下有 package.json 并指定了 main 字段，则用之</li>
-<li>如果不存在 package.json...</li></ul></li></ul>
+                <p>前面我们只是挂载了根路径的路由控制器，现在修改 index.js 如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'hello, express'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.get(<span class="string">'/users/:name'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  res.send(<span class="string">'hello, '</span> ...</span></pre></td></tr></table></figure>
             
-            <span class="read-more"><a href="/2020/01/31/2.1 require/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+            <span class="read-more"><a href="/2020/01/31/3.2 路由/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>
@@ -237,7 +227,145 @@
             
             January 31, 2020
         </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/1.2 MongoDB 的安装与使用/" title="1.2.1 安装与启动 MongoDB" class="posttitle">1.2.1 安装与启动 MongoDB</a></h3>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/3.1 初始化一个 Express 项目/" title="初始化一个Express项目" class="posttitle">初始化一个Express项目</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>Words count</i>
+                        2.7k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                        2 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>首先，我们新建一个目录 myblog，在该目录下运行 <code>npm init</code> 生成一个 package.json，如下所示：</p>
+<p></p>
+<blockquote>
+<p>注意：括号里的是默认值，如果使用默认值则直接回车即可，否则输入自定义内容后回车。</p>
+</blockquote>
+<p>然后安装 express 并写入 package.json：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i express@4.14.0 --save</span><br></pre></td></tr></table></figure>
+
+<p>新建 index.js，添加如下代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line">app...</span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2020/01/31/3.1 初始化一个 Express 项目/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+            
+            January 31, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/2.6 npm 使用注意事项/" title="2.6.1 npm init" class="posttitle">2.6.1 npm init</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>Words count</i>
+                        4.1k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                        4 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>使用 <code>npm init</code> 初始化一个空项目是一个好的习惯，即使你对 package.json 及其他属性非常熟悉，<code>npm init</code> 也是你开始写新的 Node.js 应用或模块的一个快捷的办法。<code>npm init</code> 有智能的默认选项，比如从根目录名称推断模块名称，通过 <code>~/.npmrc</code> 读取你的信息，用你的 Git 设置来确定 repository 等等。</p>
+<p><code>npm install</code> 是我们最常用的 npm 命令之一，因此我们需要好好了解下这个命令。终端输入 <code>npm install -h</code> 查看使用方式:</p>
+...
+            
+            <span class="read-more"><a href="/2020/01/31/2.6 npm 使用注意事项/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+            
+            January 31, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/2.5 package.json/" title="package" class="posttitle">package</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>Words count</i>
+                        1.4k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                        1 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>package.json 对于 Node.js 应用来说是一个不可或缺的文件，它存储了该 Node.js 应用的名字、版本、描述、作者、入口文件、脚本、版权等等信息。npm 官网有 package.json 每个字段的详细介绍：<a href="https://docs.npmjs.com/files/package.json" target="_blank" rel="noopener">https://docs.npmjs.com/files/package.json</a>。</p>
+<p>语义化版本（semver）即 dependencies、devDependencies 和 peerDependencies 里的如：<code>&quot;co&quot;: &quot;^4.6...</code></p>
+            
+            <span class="read-more"><a href="/2020/01/31/2.5 package.json/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+            
+            January 31, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/2.4 环境变量/" title="环境变量" class="posttitle">环境变量</a></h3>
         
             <p class="post-count animated fadeInDown">
                 
@@ -258,14 +386,14 @@
         
         <div class="md-content animated fadeIn">
             
-                <ul>
-<li>Windows 用户向导：<a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/</a></li>
-<li>Linux 用户向导：<a href="https://docs.mongodb.com/manual/administration/install-on-linux/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/administration/install-on-linux/</a></li>
-<li>Mac 用户向导：<a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/</a></li>
-</ul>
-<h4 id="Robomongo"><a href="#Robomongo" class="headerlink" title="Robomongo"></a>Robomongo</h4><p><a href="https://robomongo.org/" target="_blank" rel="noopener">Robomongo...</a></p>
+                <p>环境变量不属于 Node.js 的知识范畴，只不过我们在开发 Node.js 应用时经常与环境变量打交道，所以这里简单介绍下。</p>
+<p>环境变量（environment variables）一般是指在操作系统中用来指定操作系统运行环境的一些参数。在 Mac 和 Linux 的终端直接输入 env，会列出当前的环境变量，如：USER=xxx。简单来讲，环境变量就是传递参数给运行程序的。</p>
+<p>在 Node.js 中，我们经常这么用:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NODE_ENV=<span class="built_in">test</span> node app</span><br></pre></td></tr></table></figure>
+
+<p>通过以上命令启动程序，指定当前...</p>
             
-            <span class="read-more"><a href="/2020/01/31/1.2 MongoDB 的安装与使用/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+            <span class="read-more"><a href="/2020/01/31/2.4 环境变量/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>
@@ -284,147 +412,7 @@
             
             January 31, 2020
         </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.15 部署/" title="Untitled" class="posttitle">Untitled</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        16k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        15 mins.
-                    </span>
-                
-                
-            </p>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <p><a href="https://mlab.com" target="_blank" rel="noopener">MLab</a> (前身是 MongoLab) 是一个 mongodb 云数据库提供商，我们可以选择 500MB 空间的免费套餐用来测试。注册成功后，点击右上角的 <code>Create New</code> 创建一个数据库（如: myblog），成功后点击进入到该数据库详情页，注意页面中有一行黄色的警告：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A database user is required to connect to this database. To create one now, visit the &apos;Users&apos; tab and...</span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2020/01/31/4.15 部署/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
-            
-            January 31, 2020
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.14 测试/" title="测试" class="posttitle">测试</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        21k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        19 mins.
-                    </span>
-                
-                
-            </p>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <p><a href="https://www.npmjs.com/package/mocha" target="_blank" rel="noopener">mocha</a> 和 <a href="https://www.npmjs.com/package/supertest" target="_blank" rel="noopener">supertest</a> 是常用的测试组合，通常用来测试 restful 的 api 接口，这里我们也可以用来测试我们的博客应用。<br>在 myblog 下新建 test 文件夹存放测试文件，以注册为例讲解 mocha 和 supertest 的用法。首先安装所需模块：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i mocha supertest --save-dev</span><br></pre></td></tr></table></figure>
-
-<p>修改 package.json，将：</p>
-<p><strong>package.json</strong></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "test": "echo \"Error: no...</span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2020/01/31/4.14 测试/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
-            
-            January 31, 2020
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.13 日志/" title="Untitled" class="posttitle">Untitled</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        7.8k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        7 mins.
-                    </span>
-                
-                
-            </p>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <hr>
-<p>现在我们来实现日志功能，日志分为正常请求的日志和错误请求的日志，我们希望实现这两种日志都打印到终端并写入文件。</p>
-<p>我们使用 <a href="https://www.npmjs.com/package/winston" target="_blank" rel="noopener">winston</a> 和 <a href="https://www.npmjs.com/package/express-winston" target="_blank" rel="noopener">express-winston</a> 记录日志。</p>
-<p>新建 logs 目录存放日志文件，修改 index.js，在：</p>
-<p><strong>index.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> pkg = <span class="built_in">require</span>(<span class="string">'./package'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>下引入所需模块：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> winston = <span class="built_in">require</span>(<span class="string">'winston'</span>)</span><br><span class="line"><span class="keyword">const</span> expressWinston = <span class="built_in">require</span>(<span class="string">'express...</span></span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2020/01/31/4.13 日志/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
-            
-            January 31, 2020
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.12 错误页面/" title="错误页面" class="posttitle">错误页面</a></h3>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/2.3 Promise/" title="Promise" class="posttitle">Promise</a></h3>
         
             <p class="post-count animated fadeInDown">
                 
@@ -445,10 +433,13 @@
         
         <div class="md-content animated fadeIn">
             
-                <p>前面讲到 express 有一个内置的错误处理逻辑，如果程序出错，会直接将错误栈返回并显示到页面上。如访问：<code>localhost:3000/posts/xxx/edit</code> 没有权限编辑的文章页，将会直接在页面中显示错误栈，如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Error</span>: 权限不足</span><br><span class="line">    at /Users/nswbmw/Desktop/myblog/routes/posts.js:<span class="number">95</span>:<span class="number">15</span></span><br><span class="line">    at &lt;anonymous&gt;</span><br><span class="line">    at process._tickCallback (internal/process/next_tick...</span></pre></td></tr></table></figure>
+                <p>网上已经有许多关于 Promise 的资料了，这里不在赘述。以下 4 个链接供读者学习：</p>
+<ol>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise</a> （基础）</li>
+<li><a href="http://liubin.org/promises-book/" target="_blank" rel="noopener">http://liubin.org/promises-book/</a> （开源 Promise 迷你书）</li>
+<li><a href="http://fex.baidu.com/blog/2015/07/we-have-a-problem-with-promises/" target="_blank" rel="noopener">http://fex.baidu.com/blog/2015/07/we-have-a-problem-with-promises...</a></li></ol>
             
-            <span class="read-more"><a href="/2020/01/31/4.12 错误页面/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+            <span class="read-more"><a href="/2020/01/31/2.3 Promise/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>
@@ -465,15 +456,116 @@
             
                 <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
             
-            January 31, 2020
+            January 30, 2020
         </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.11 404 页面/" title="404页面" class="posttitle">404页面</a></h3>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/关于obsidian主题/" title="关于obsidian主题" class="posttitle">关于obsidian主题</a></h3>
         
             <p class="post-count animated fadeInDown">
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        3k
+                        9.7k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                        9 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>#! —————————————————————</p>
+<p>#! 版本<code>v1.3.5</code>开始代码高亮已经用<code>codemirror</code>替换了<code>highlight.js</code>，</p>
+<p>#! 但是Hexo默认的highlight配置还是需要关闭的。</p>
+<p>#! ！！所以无比把Hexo默认的highlight配置改为<code>enable: flase</code> ！！</p>
+<p>#! —————————————————————</p>
+<p>#! highlight:</p>
+<p>#!  enable: false</p>
+<p>#!  line_number: true</p>
+<p>#!  auto_detect: true</p>
+<p>#...</p>
+            
+            <span class="read-more"><a href="/2020/01/30/关于obsidian主题/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+            
+            January 30, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/blog/" title="This Is My Blog About Code" class="posttitle">This Is My Blog About Code</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>Words count</i>
+                        1.4k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                        1 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>shell scripts:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from 'react'</span><br><span class="line"></span><br><span class="line">export default class 博客问题以及解决方案 extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>I don’t know some one before</p>
+</blockquote>
+
+            
+            <span class="read-more"><a href="/2020/01/30/blog/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/随笔">
+                  <b>「 </b>随笔<b> 」</b>
+                </a>
+            
+            January 21, 2014
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2014/01/21/1.1 Node.js 的安装与使用/" title="Hello，World!你好，世界！" class="posttitle">Hello，World!你好，世界！</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>Words count</i>
+                        3.6k
                     </span>
                 
                 
@@ -485,118 +577,24 @@
                 
             </p>
             
-        
-        <div class="md-content animated fadeIn">
-            
-                <p>现在访问一个不存在的地址，如：<code>http://localhost:3000/haha</code> 页面会显示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot GET /haha</span><br></pre></td></tr></table></figure>
-
-<p>我们来自定义 404 页面。修改 routes/index.js，在：</p>
-<p><strong>routes/index.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="string">'/comments'</span>, <span class="built_in">require</span>(<span class="string">'./comments'</span>))</span><br></pre></td></tr></table></figure>
-
-<p>下添加如下代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 404 page</span></span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!res.headersSent) &#123...</span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2020/01/31/4.11 404 页面/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
-            
-            January 31, 2020
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.10 留言/" title="Untitled" class="posttitle">Untitled</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        32k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        29 mins.
-                    </span>
-                
-                
-            </p>
+                <ul class="animated fadeInDown post-tags-list"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/写作/">写作</a></li></ul>
             
         
         <div class="md-content animated fadeIn">
             
-                <hr>
-<p>我们只需要留言的作者 id、留言内容和关联的文章 id 这几个字段，修改 lib/mongo.js，添加如下代码：</p>
-<p><strong>lib/mongo.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">exports.Comment = mongolass.model(<span class="string">'Comment'</span>, &#123;</span><br><span class="line">  author: &#123; <span class="attr">type</span>: Mongolass.Types.ObjectId, <span class="attr">required</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  content: &#123; <span class="attr">type</span>: <span class="string">'string'</span>, <span class="attr">required</span>: <span class="literal">true</span> &#125...</span></pre></td></tr></table></figure>
+                <p>有三种方式安装 Node.js：一是通过安装包安装，二是通过源码编译安装，三是在 Linux 下可以通过 yum|apt-get 安装，在 Mac 下可以通过 <a href="http://brew.sh/" target="_blank" rel="noopener">Homebrew</a> 安装。对于 Windows 和 Mac 用户，推荐使用安装包安装，Linux 用户推荐使用源码编译安装。</p>
+<h4 id="Windows-和-Mac-安装："><a href="#Windows-和-Mac-安装：" class="headerlink" title="Windows 和 Mac 安装："></a>Windows 和 Mac 安装：</h4><p><strong>第一步：</strong></p>
+<p>打开 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js 官网</a>，可以看到以下两个下载选项：</p>
+<p></p>
+<p>左边的是 LTS 版，用过 ubuntu 的同学可能比较熟悉，即长期支持版本，大多数人用这个就可以了。右边是最新版...</p>
             
-            <span class="read-more"><a href="/2020/01/31/4.10 留言/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
-            
-            January 31, 2020
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.9 文章/" title="Untitled" class="posttitle">Untitled</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        51k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        47 mins.
-                    </span>
-                
-                
-            </p>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <hr>
-<p>我们只存储文章的作者 id、标题、正文和点击量这几个字段，对应修改 lib/mongo.js，添加如下代码：</p>
-<p><strong>lib/mongo.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">exports.Post = mongolass.model(<span class="string">'Post'</span>, &#123;</span><br><span class="line">  author: &#123; <span class="attr">type</span>: Mongolass.Types.ObjectId, <span class="attr">required</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  title: &#123; <span class="attr">type</span>: <span class="string">'string'</span>, <span class="attr">required</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  content...</span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2020/01/31/4.9 文章/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+            <span class="read-more"><a href="/2014/01/21/1.1 Node.js 的安装与使用/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>
 
 
     </div>
-    
-    <div id="pager"><a href="/page/2/" class="more" data-loading="Loading..." data-load-more="Load more">Load more</a></div>
     
 </div>
 <div id="preview"></div>

@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>This Is My Blog About Code - 浮雨博客</title>
+    <title> - 浮雨博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="This is my bloghey welcome Floating Rain Blogshell scripts:
-1234567891011import React, &amp;#123; Compo,"> 
+    <meta name="description" content="
+title:日志现在我们来实现日志功能，日志分为正常请求的日志和错误请求的日志，我们希望实现这两种日志都打印到终端并写入文件。
+4.13.1 winston 和 express-winston我们,"> 
     <meta name="author" content="Floating Rain"> 
     <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -44,7 +45,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">This Is My Blog About Code</h3>
+        <h3 class="subtitle"></h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -76,22 +77,22 @@
                 
                 <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
                 
-                January 30, 2020
+                January 31, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/blog/" title="This Is My Blog About Code">This Is My Blog About Code</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.13 日志/" title="Untitled">Untitled</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    1.4k
+                    7.8k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    1 mins.
+                    7 mins.
                 </span>
                 
                 
@@ -123,12 +124,46 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="This-is-my-blog"><a href="#This-is-my-blog" class="headerlink" title="This is my blog"></a>This is my blog</h1><h2 id="hey-welcome-Floating-Rain-Blog"><a href="#hey-welcome-Floating-Rain-Blog" class="headerlink" title="hey welcome Floating Rain Blog"></a>hey welcome Floating Rain Blog</h2><p>shell scripts:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from 'react'</span><br><span class="line"></span><br><span class="line">export default class 博客问题以及解决方案 extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <hr>
+<h2 id="title-日志"><a href="#title-日志" class="headerlink" title="title:日志"></a>title:日志</h2><p>现在我们来实现日志功能，日志分为正常请求的日志和错误请求的日志，我们希望实现这两种日志都打印到终端并写入文件。</p>
+<h2 id="4-13-1-winston-和-express-winston"><a href="#4-13-1-winston-和-express-winston" class="headerlink" title="4.13.1 winston 和 express-winston"></a>4.13.1 winston 和 express-winston</h2><p>我们使用 <a href="https://www.npmjs.com/package/winston" target="_blank" rel="noopener">winston</a> 和 <a href="https://www.npmjs.com/package/express-winston" target="_blank" rel="noopener">express-winston</a> 记录日志。</p>
+<p>新建 logs 目录存放日志文件，修改 index.js，在：</p>
+<p><strong>index.js</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> pkg = <span class="built_in">require</span>(<span class="string">'./package'</span>)</span><br></pre></td></tr></table></figure>
 
+<p>下引入所需模块：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> winston = <span class="built_in">require</span>(<span class="string">'winston'</span>)</span><br><span class="line"><span class="keyword">const</span> expressWinston = <span class="built_in">require</span>(<span class="string">'express-winston'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>将：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 路由</span><br><span class="line">routes(app)</span><br></pre></td></tr></table></figure>
+
+<p>修改为：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 正常请求的日志</span></span><br><span class="line">app.use(expressWinston.logger(&#123;</span><br><span class="line">  transports: [</span><br><span class="line">    <span class="keyword">new</span> (winston.transports.Console)(&#123;</span><br><span class="line">      json: <span class="literal">true</span>,</span><br><span class="line">      colorize: <span class="literal">true</span></span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="keyword">new</span> winston.transports.File(&#123;</span><br><span class="line">      filename: <span class="string">'logs/success.log'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;))</span><br><span class="line"><span class="comment">// 路由</span></span><br><span class="line">routes(app)</span><br><span class="line"><span class="comment">// 错误请求的日志</span></span><br><span class="line">app.use(expressWinston.errorLogger(&#123;</span><br><span class="line">  transports: [</span><br><span class="line">    <span class="keyword">new</span> winston.transports.Console(&#123;</span><br><span class="line">      json: <span class="literal">true</span>,</span><br><span class="line">      colorize: <span class="literal">true</span></span><br><span class="line">    &#125;),</span><br><span class="line">    <span class="keyword">new</span> winston.transports.File(&#123;</span><br><span class="line">      filename: <span class="string">'logs/error.log'</span></span><br><span class="line">    &#125;)</span><br><span class="line">  ]</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+
+<p>刷新页面看一下终端输出及 logs 下的文件。<br>可以看出：winston 将正常请求的日志打印到终端并写入了 <code>logs/success.log</code>，将错误请求的日志打印到终端并写入了 <code>logs/error.log</code>。</p>
 <blockquote>
-<p>I don’t know some one before</p>
+<p>注意：记录正常请求日志的中间件要放到 <code>routes(app)</code> 之前，记录错误请求日志的中间件要放到 <code>routes(app)</code> 之后。</p>
 </blockquote>
+<h2 id="4-13-2-gitignore"><a href="#4-13-2-gitignore" class="headerlink" title="4.13.2 .gitignore"></a>4.13.2 .gitignore</h2><p>如果我们想把项目托管到 git 服务器上（如: <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>），而不想把线上配置、本地调试的 logs 以及 node_modules 添加到 git 的版本控制中，这个时候就需要 .gitignore 文件了，git 会读取 .gitignore 并忽略这些文件。在 myblog 下新建 .gitignore 文件，添加如下配置：</p>
+<p><strong>.gitignore</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">config/*</span><br><span class="line">!config/default.*</span><br><span class="line">npm-debug.log</span><br><span class="line">node_modules</span><br><span class="line">coverage</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，通过设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">config/*</span><br><span class="line">!config/default.*</span><br></pre></td></tr></table></figure>
+
+<p>这样只有 config/default.js 会加入 git 的版本控制，而 config 目录下的其他配置文件则会被忽略，因为把线上配置加入到 git 是一个不安全的行为，通常你需要本地或者线上环境手动创建 config/production.js，然后添加一些线上的配置（如：mongodb 配置）即可覆盖相应的 default 配置。</p>
+<blockquote>
+<p>注意：后面讲到部署到 Heroku 时，因为无法登录到 Heroku 主机，所以可以把以下两行删掉，将 config/production.js 也加入 git 中。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; config/*</span><br><span class="line">&gt; !config/default.*</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>然后在 public/img 目录下创建 .gitignore：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Ignore everything in this directory</span><br><span class="line">*</span><br><span class="line"># Except this file</span><br><span class="line">!.gitignore</span><br></pre></td></tr></table></figure>
+
+<p>这样 git 会忽略 public/img 目录下所有上传的头像，而不忽略 public/img 目录。同理，在 logs 目录下创建 .gitignore 忽略日志文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Ignore everything in this directory</span><br><span class="line">*</span><br><span class="line"># Except this file</span><br><span class="line">!.gitignore</span><br></pre></td></tr></table></figure>
+
+<p>上一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/4.12%20%E9%94%99%E8%AF%AF%E9%A1%B5%E9%9D%A2.md" target="_blank" rel="noopener">4.12 错误页面</a></p>
+<p>下一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/4.14%20%E6%B5%8B%E8%AF%95.md" target="_blank" rel="noopener">4.14 测试</a></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -187,7 +222,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#This-is-my-blog"><span class="toc-number">1.</span> <span class="toc-text">This is my blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hey-welcome-Floating-Rain-Blog"><span class="toc-number">1.1.</span> <span class="toc-text">hey welcome Floating Rain Blog</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title-日志"><span class="toc-number">1.</span> <span class="toc-text">title:日志</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-13-1-winston-和-express-winston"><span class="toc-number">2.</span> <span class="toc-text">4.13.1 winston 和 express-winston</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-13-2-gitignore"><span class="toc-number">3.</span> <span class="toc-text">4.13.2 .gitignore</span></a></li></ol>
                 </div>
             </div>
             

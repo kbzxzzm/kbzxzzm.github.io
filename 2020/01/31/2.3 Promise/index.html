@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>This Is My Blog About Code - 浮雨博客</title>
+    <title>Promise - 浮雨博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="This is my bloghey welcome Floating Rain Blogshell scripts:
-1234567891011import React, &amp;#123; Compo,"> 
+    <meta name="description" content="网上已经有许多关于 Promise 的资料了，这里不在赘述。以下 4 个链接供读者学习：
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScri,"> 
     <meta name="author" content="Floating Rain"> 
     <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -44,7 +45,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">This Is My Blog About Code</h3>
+        <h3 class="subtitle">Promise</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -76,22 +77,22 @@
                 
                 <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
                 
-                January 30, 2020
+                January 31, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/blog/" title="This Is My Blog About Code">This Is My Blog About Code</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/2.3 Promise/" title="Promise">Promise</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    1.4k
+                    2k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    1 mins.
+                    2 mins.
                 </span>
                 
                 
@@ -123,12 +124,22 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="This-is-my-blog"><a href="#This-is-my-blog" class="headerlink" title="This is my blog"></a>This is my blog</h1><h2 id="hey-welcome-Floating-Rain-Blog"><a href="#hey-welcome-Floating-Rain-Blog" class="headerlink" title="hey welcome Floating Rain Blog"></a>hey welcome Floating Rain Blog</h2><p>shell scripts:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from 'react'</span><br><span class="line"></span><br><span class="line">export default class 博客问题以及解决方案 extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>I don’t know some one before</p>
-</blockquote>
+            <p>网上已经有许多关于 Promise 的资料了，这里不在赘述。以下 4 个链接供读者学习：</p>
+<ol>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="noopener">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise</a> （基础）</li>
+<li><a href="http://liubin.org/promises-book/" target="_blank" rel="noopener">http://liubin.org/promises-book/</a> （开源 Promise 迷你书）</li>
+<li><a href="http://fex.baidu.com/blog/2015/07/we-have-a-problem-with-promises/" target="_blank" rel="noopener">http://fex.baidu.com/blog/2015/07/we-have-a-problem-with-promises/</a> （进阶）</li>
+<li><a href="https://promisesaplus.com/" target="_blank" rel="noopener">https://promisesaplus.com/</a> （官方定义规范）</li>
+</ol>
+<p>Promise 用于异步流程控制，生成器与 yield 也能实现流程控制（基于 co），但不在本教程讲解范围内，读者可参考我的另一部教程 <a href="https://github.com/nswbmw/N-club" target="_blank" rel="noopener">N-club</a>。async/await 结合 Promise 也可以实现流程控制，有兴趣请查阅 <a href="http://es6.ruanyifeng.com/#docs/async#async函数" target="_blank" rel="noopener">《ECMAScript6入门》</a>。</p>
+<h3 id="深入-Promise"><a href="#深入-Promise" class="headerlink" title="深入 Promise"></a>深入 Promise</h3><ul>
+<li><a href="https://zhuanlan.zhihu.com/p/30797777" target="_blank" rel="noopener">Promise 必知必会（十道题）</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/25178630" target="_blank" rel="noopener">深入 Promise(一)——Promise 实现详解</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/25198178" target="_blank" rel="noopener">深入 Promise(二)——进击的 Promise</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/25199781" target="_blank" rel="noopener">深入 Promise(三)——命名 Promise</a></li>
+</ul>
+<p>上一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/2.2%20exports%20%E5%92%8C%20module.exports.md" target="_blank" rel="noopener">2.2 exports 和 module.exports</a></p>
+<p>下一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/2.4%20%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.md" target="_blank" rel="noopener">2.4 环境变量</a></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -187,7 +198,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#This-is-my-blog"><span class="toc-number">1.</span> <span class="toc-text">This is my blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hey-welcome-Floating-Rain-Blog"><span class="toc-number">1.1.</span> <span class="toc-text">hey welcome Floating Rain Blog</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#深入-Promise"><span class="toc-number">1.</span> <span class="toc-text">深入 Promise</span></a></li></ol>
                 </div>
             </div>
             

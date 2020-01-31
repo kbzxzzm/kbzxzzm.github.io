@@ -126,19 +126,19 @@
             January 31, 2020
         </p>
         <h3 class="post-title animated fadeInDown">
-            <a href="/2020/01/31/2.2 exports 和 module.exports/" title="exports和module,exports" class="posttitle">exports和module,exports</a></h3>
+            <a href="/2020/01/31/4.8 登出与登录/" title="登出与登录" class="posttitle">登出与登录</a></h3>
         
         <p class="post-count animated fadeInDown">
             
             <span>
                 <b class="iconfont icon-text2"></b> <i>Words count</i>
-                4.2k
+                17k
             </span>
             
             
             <span>
                 <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                4 mins.
+                16 mins.
             </span>
             
             
@@ -147,10 +147,11 @@
         
         <div class="md-content animated fadeIn">
             
-            <p>require 用来加载代码，而 exports 和 module.exports 则用来导出代码。</p>
-<p>很多新手可能会迷惑于 exports 和 module.exports 的区别，为了更好的理解 exports...</p>
+            <p>现在我们来完成登出的功能。修改 routes/signout.js 如下：</p>
+<p><strong>routes/signout.js</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require...</span></span></pre></td></tr></table></figure>
             
-            <span class="read-more"><a href="/2020/01/31/2.2 exports 和 module.exports/" title="Read article" class="posttitle">Read article</a>
+            <span class="read-more"><a href="/2020/01/31/4.8 登出与登录/" title="Read article" class="posttitle">Read article</a>
                 <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
@@ -184,19 +185,19 @@
             
             January 31, 2020
         </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/2.1 require/" title="require 用来加载一个文件的代码，关于 require 的机制这里不展开讲解，请仔细阅读 [官方文档](https://nodejs.org/api/modules.html)。" class="posttitle">require 用来加载一个文件的代码，关于 require 的机制这里不展开讲解，请仔细阅读 [官方文档](https://nodejs.org/api/modules.html)。</a></h3>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.8 登出与登录/" title="登出与登录" class="posttitle">登出与登录</a></h3>
         
             <p class="post-count animated fadeInDown">
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        3k
+                        17k
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        3 mins.
+                        16 mins.
                     </span>
                 
                 
@@ -205,20 +206,226 @@
         
         <div class="md-content animated fadeIn">
             
-                <p>简单概括以下几点:</p>
-<ul>
-<li>require 可加载 .js、.json 和 .node 后缀的文件</li>
-<li>require 的过程是同步的，所以这样是错误的:<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">  module.exports = &#123; a: <span class="string">'hello'</span> &#125;</span><br><span class="line">&#125;, 0)</span><br></pre></td></tr></table></figure>
+                <p>现在我们来完成登出的功能。修改 routes/signout.js 如下：</p>
+<p><strong>routes/signout.js</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">const</span> router = express.Router()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> checkLogin = <span class="built_in">require</span>(<span class="string">'../middlewares/check'</span>).checkLogin</span><br><span class="line"></span><br><span class="line"><span class="comment">// GET /signout 登出</span></span><br><span class="line">router.get(<span class="string">'/'</span>, checkLogin, <span class="function"><span class="keyword">function...</span></span></span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2020/01/31/4.8 登出与登录/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
 
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+            
+            January 31, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.7 注册/" title="用户设计模型" class="posttitle">用户设计模型</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>Words count</i>
+                        23k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                        21 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>我们只存储用户的名称、密码（加密后的）、头像、性别和个人简介这几个字段，对应修改 lib/mongo.js，添加如下代码：</p>
+<p><strong>lib/mongo.js</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">exports.User = mongolass.model(<span class="string">'User'</span>, &#123;</span><br><span class="line">  name: &#123; <span class="attr">type</span>: <span class="string">'string'</span>, <span class="attr">required</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  password: &#123; <span class="attr">type</span>: <span class="string">'string'</span>, <span class="attr">required</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  avatar: &#123...</span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2020/01/31/4.7 注册/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+            
+            January 31, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.6 连接数据库/" title="连接数据库" class="posttitle">连接数据库</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>Words count</i>
+                        14k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                        13 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>我们使用 <a href="https://github.com/mongolass/mongolass" target="_blank" rel="noopener">Mongolass</a> 这个模块操作 mongodb 进行增删改查。在 myblog 下新建 lib 目录，在该目录下新建 mongo.js，添加如下代码：</p>
+<p><strong>lib/mongo.js</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> config = <span class="built_in">require</span>(<span class="string">'config-lite'</span>)(__dirname)</span><br><span class="line"><span class="keyword">const</span> Mongolass = <span class="built_in">require</span>(<span class="string">'mongolass'</span>)</span><br><span class="line"><span class="keyword">const</span> mongolass = <span class="keyword">new</span> Mongolass()</span><br><span class="line">mongolass.connect(config.mongodb...</span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2020/01/31/4.6 连接数据库/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+            
+            January 31, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.5 页面设计/" title="页面设计" class="posttitle">页面设计</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>Words count</i>
+                        25k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                        23 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>我们使用 jQuery + Semantic-UI 实现前端页面的设计，最终效果图如下:</p>
+<p><strong>注册页</strong></p>
+<p></p>
+<p><strong>登录页</strong></p>
+<p></p>
+<p><strong>未登录时的主页（或用户页）</strong></p>
+<p></p>
+<p><strong>登录后的主页（或用户页）</strong></p>
+<p></p>
+<p><strong>发表文章页</strong></p>
+<p></p>
+<p><strong>编辑文章页</strong></p>
+<p></p>
+<p><strong>未登录时的文章页</strong></p>
+<p></p>
+<p><strong>登录后的文章页</strong></p>
+<p></p>
+<p><strong>通知</strong></p>
+<p><br><br></p>
+<p>前面提到过，我们可以将模板拆分成一些组件，然后使用 ejs 的 include 方法将组件组合起来进行渲染。我们将页面切分成以下组件：</p>
+<p><strong>主页</strong></p>
+<p></p>
+<p><strong>文章页</strong></p>
+<p></p>
+<p>根据上面的组件切分图，我们创建以下样式及模板文件：</p>
+<p><strong>public/css/style.css</strong></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5...</span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2020/01/31/4.5 页面设计/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+            
+            January 31, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.4 功能设计/" title="功能设计" class="posttitle">功能设计</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>Words count</i>
+                        29k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                        26 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>在开发博客之前，我们首先需要明确博客要实现哪些功能。由于本教程面向初学者，所以只实现了博客最基本的功能，其余的功能（如归档、标签、分页等等）读者可自行实现。</p>
+<p>功能及路由设计如下：</p>
+<ol>
+<li>注册<ol>
+<li>注册页：<code>GET /signup</code></li>
+<li>注册（包含上传头像）：<code>POST /signup</code></li>
+</ol>
 </li>
-</ul>
-<p>require 这个文件得到的是空对象 <code>{}</code></p>
-<ul>
-<li>require 目录的机制是:<ul>
-<li>如果目录下有 package.json 并指定了 main 字段，则用之</li>
-<li>如果不存在 package.json...</li></ul></li></ul>
+<li>登录<ol>
+<li>登录页：<code>GET /signin</code></li>
+<li>登录：<code>POST /signin</code></li>
+</ol>
+</li>
+<li>登出：<code>GET /signout</code></li>
+<li>查看文章<ol>
+<li>主页：<code>GET /posts</code></li>
+<li>个人主页：<code>GET /posts?author=xxx</code></li>
+<li>查看一篇文章（包含留言）：<code>GET...</code></li></ol></li></ol>
             
-            <span class="read-more"><a href="/2020/01/31/2.1 require/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+            <span class="read-more"><a href="/2020/01/31/4.4 功能设计/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>
@@ -237,237 +444,7 @@
             
             January 31, 2020
         </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/1.2 MongoDB 的安装与使用/" title="1.2.1 安装与启动 MongoDB" class="posttitle">1.2.1 安装与启动 MongoDB</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        2.5k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        2 mins.
-                    </span>
-                
-                
-            </p>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <ul>
-<li>Windows 用户向导：<a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/</a></li>
-<li>Linux 用户向导：<a href="https://docs.mongodb.com/manual/administration/install-on-linux/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/administration/install-on-linux/</a></li>
-<li>Mac 用户向导：<a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/" target="_blank" rel="noopener">https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/</a></li>
-</ul>
-<h4 id="Robomongo"><a href="#Robomongo" class="headerlink" title="Robomongo"></a>Robomongo</h4><p><a href="https://robomongo.org/" target="_blank" rel="noopener">Robomongo...</a></p>
-            
-            <span class="read-more"><a href="/2020/01/31/1.2 MongoDB 的安装与使用/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
-            
-            January 31, 2020
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.15 部署/" title="Untitled" class="posttitle">Untitled</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        16k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        15 mins.
-                    </span>
-                
-                
-            </p>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <p><a href="https://mlab.com" target="_blank" rel="noopener">MLab</a> (前身是 MongoLab) 是一个 mongodb 云数据库提供商，我们可以选择 500MB 空间的免费套餐用来测试。注册成功后，点击右上角的 <code>Create New</code> 创建一个数据库（如: myblog），成功后点击进入到该数据库详情页，注意页面中有一行黄色的警告：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A database user is required to connect to this database. To create one now, visit the &apos;Users&apos; tab and...</span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2020/01/31/4.15 部署/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
-            
-            January 31, 2020
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.14 测试/" title="测试" class="posttitle">测试</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        21k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        19 mins.
-                    </span>
-                
-                
-            </p>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <p><a href="https://www.npmjs.com/package/mocha" target="_blank" rel="noopener">mocha</a> 和 <a href="https://www.npmjs.com/package/supertest" target="_blank" rel="noopener">supertest</a> 是常用的测试组合，通常用来测试 restful 的 api 接口，这里我们也可以用来测试我们的博客应用。<br>在 myblog 下新建 test 文件夹存放测试文件，以注册为例讲解 mocha 和 supertest 的用法。首先安装所需模块：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i mocha supertest --save-dev</span><br></pre></td></tr></table></figure>
-
-<p>修改 package.json，将：</p>
-<p><strong>package.json</strong></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "test": "echo \"Error: no...</span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2020/01/31/4.14 测试/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
-            
-            January 31, 2020
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.13 日志/" title="Untitled" class="posttitle">Untitled</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        7.8k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        7 mins.
-                    </span>
-                
-                
-            </p>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <hr>
-<p>现在我们来实现日志功能，日志分为正常请求的日志和错误请求的日志，我们希望实现这两种日志都打印到终端并写入文件。</p>
-<p>我们使用 <a href="https://www.npmjs.com/package/winston" target="_blank" rel="noopener">winston</a> 和 <a href="https://www.npmjs.com/package/express-winston" target="_blank" rel="noopener">express-winston</a> 记录日志。</p>
-<p>新建 logs 目录存放日志文件，修改 index.js，在：</p>
-<p><strong>index.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> pkg = <span class="built_in">require</span>(<span class="string">'./package'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>下引入所需模块：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> winston = <span class="built_in">require</span>(<span class="string">'winston'</span>)</span><br><span class="line"><span class="keyword">const</span> expressWinston = <span class="built_in">require</span>(<span class="string">'express...</span></span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2020/01/31/4.13 日志/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
-            
-            January 31, 2020
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.12 错误页面/" title="错误页面" class="posttitle">错误页面</a></h3>
-        
-            <p class="post-count animated fadeInDown">
-                
-                    <span>
-                        <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        2k
-                    </span>
-                
-                
-                    <span>
-                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        2 mins.
-                    </span>
-                
-                
-            </p>
-            
-        
-        <div class="md-content animated fadeIn">
-            
-                <p>前面讲到 express 有一个内置的错误处理逻辑，如果程序出错，会直接将错误栈返回并显示到页面上。如访问：<code>localhost:3000/posts/xxx/edit</code> 没有权限编辑的文章页，将会直接在页面中显示错误栈，如下：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Error</span>: 权限不足</span><br><span class="line">    at /Users/nswbmw/Desktop/myblog/routes/posts.js:<span class="number">95</span>:<span class="number">15</span></span><br><span class="line">    at &lt;anonymous&gt;</span><br><span class="line">    at process._tickCallback (internal/process/next_tick...</span></pre></td></tr></table></figure>
-            
-            <span class="read-more"><a href="/2020/01/31/4.12 错误页面/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
-        </div>
-    </div>
-</div>
-
-
-<div class="post" id="post">
-    <div class="post-cover animated fadeIn" style="
-            background-image:
-            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-            url(/img/welcome-cover.jpg);">
-    </div>
-    <div class="else">
-        <p class="animated fadeInDown">
-            
-                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
-            
-            January 31, 2020
-        </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.11 404 页面/" title="404页面" class="posttitle">404页面</a></h3>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.3 配置文件/" title="配置文件" class="posttitle">配置文件</a></h3>
         
             <p class="post-count animated fadeInDown">
                 
@@ -488,17 +465,10 @@
         
         <div class="md-content animated fadeIn">
             
-                <p>现在访问一个不存在的地址，如：<code>http://localhost:3000/haha</code> 页面会显示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot GET /haha</span><br></pre></td></tr></table></figure>
-
-<p>我们来自定义 404 页面。修改 routes/index.js，在：</p>
-<p><strong>routes/index.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.use(<span class="string">'/comments'</span>, <span class="built_in">require</span>(<span class="string">'./comments'</span>))</span><br></pre></td></tr></table></figure>
-
-<p>下添加如下代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 404 page</span></span><br><span class="line">app.use(<span class="function"><span class="keyword">function</span> (<span class="params">req, res</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!res.headersSent) &#123...</span></pre></td></tr></table></figure>
+                <p>不管是小项目还是大项目，将配置与代码分离是一个非常好的做法。我们通常将配置写到一个配置文件里，如 config.js 或 config.json ，并放到项目的根目录下。但实际开发时我们会有许多环境，如本地开发环境、测试环境和线上环境等，不同环境的配置不同（如：MongoDB 的地址），我们不可能每次部署时都要去修改引用 config.test.js 或者 config.production.js。config-lite 模块正是你需要的。</p>
+<p><a href="https://www.npmjs.com/package/config-lite" target="_blank" rel="noopener">config-lite</a> 是一个轻量的读取配置文件的模块...</p>
             
-            <span class="read-more"><a href="/2020/01/31/4.11 404 页面/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+            <span class="read-more"><a href="/2020/01/31/4.3 配置文件/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>
@@ -517,19 +487,19 @@
             
             January 31, 2020
         </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.10 留言/" title="Untitled" class="posttitle">Untitled</a></h3>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.2 准备工作/" title="准备工作" class="posttitle">准备工作</a></h3>
         
             <p class="post-count animated fadeInDown">
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        32k
+                        5.6k
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        29 mins.
+                        5 mins.
                     </span>
                 
                 
@@ -538,12 +508,23 @@
         
         <div class="md-content animated fadeIn">
             
-                <hr>
-<p>我们只需要留言的作者 id、留言内容和关联的文章 id 这几个字段，修改 lib/mongo.js，添加如下代码：</p>
-<p><strong>lib/mongo.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">exports.Comment = mongolass.model(<span class="string">'Comment'</span>, &#123;</span><br><span class="line">  author: &#123; <span class="attr">type</span>: Mongolass.Types.ObjectId, <span class="attr">required</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  content: &#123; <span class="attr">type</span>: <span class="string">'string'</span>, <span class="attr">required</span>: <span class="literal">true</span> &#125...</span></pre></td></tr></table></figure>
+                <p>我们停止 supervisor 并删除 myblog 目录从头来过。重新创建 myblog，运行 <code>npm init</code>，如下：</p>
+<p></p>
+<p>在 myblog 目录下创建以下目录及空文件（package.json 除外）：</p>
+<p></p>
+<p>对应文件及文件夹的用处：</p>
+<ol>
+<li><code>models</code>: 存放操作数据库的文件</li>
+<li><code>public</code>: 存放静态文件，如样式、图片等</li>
+<li><code>routes</code>: 存放路由文件</li>
+<li><code>views</code>: 存放模板文件</li>
+<li><code>index.js</code>: 程序主文件</li>
+<li><code>package.json</code>: 存储项目名、描述、作者、依赖等等信息</li>
+</ol>
+<blockquote>
+<p>小提示：不知读者发...</p></blockquote>
             
-            <span class="read-more"><a href="/2020/01/31/4.10 留言/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+            <span class="read-more"><a href="/2020/01/31/4.2 准备工作/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>
@@ -562,19 +543,19 @@
             
             January 31, 2020
         </p>
-        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.9 文章/" title="Untitled" class="posttitle">Untitled</a></h3>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/4.1 开发环境/" title="开发环境" class="posttitle">开发环境</a></h3>
         
             <p class="post-count animated fadeInDown">
                 
                     <span>
                         <b class="iconfont icon-text2"></b> <i>Words count</i>
-                        51k
+                        754
                     </span>
                 
                 
                     <span>
                         <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                        47 mins.
+                        1 mins.
                     </span>
                 
                 
@@ -583,12 +564,104 @@
         
         <div class="md-content animated fadeIn">
             
-                <hr>
-<p>我们只存储文章的作者 id、标题、正文和点击量这几个字段，对应修改 lib/mongo.js，添加如下代码：</p>
-<p><strong>lib/mongo.js</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">exports.Post = mongolass.model(<span class="string">'Post'</span>, &#123;</span><br><span class="line">  author: &#123; <span class="attr">type</span>: Mongolass.Types.ObjectId, <span class="attr">required</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  title: &#123; <span class="attr">type</span>: <span class="string">'string'</span>, <span class="attr">required</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">  content...</span></pre></td></tr></table></figure>
+                <p>从本章开始，正式学习如何使用 Express + MongoDB 搭建一个博客。</p>
+<h4 id="Node-js-8-9-1"><a href="#Node-js-8-9-1" class="headerlink" title="Node.js: 8.9.1"></a>Node.js: <code>8.9.1</code></h4><h4 id="MongoDB-3-4-10"><a href="#MongoDB-3-4-10" class="headerlink" title="MongoDB: 3.4.10"></a>MongoDB: <code>3.4.10</code></h4><h4 id="Express-4-16-2"><a href="#Express-4-16-2" class="headerlink" title="Express: 4.16.2"></a>Express: <code>4.16.2</code></h4><p>上一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/3.4%20Express%20%E6%B5%85%E6%9E%90.md" target="_blank" rel="noopener">3.4 Express 浅析</a></p>
+<p>下一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/4.2%20%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C.md" target="_blank" rel="noopener">4.2 准备工作</a></p>
+
             
-            <span class="read-more"><a href="/2020/01/31/4.9 文章/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+            <span class="read-more"><a href="/2020/01/31/4.1 开发环境/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+            
+            January 31, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/3.4 Express 浅析/" title="Express浅析" class="posttitle">Express浅析</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>Words count</i>
+                        8.9k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                        8 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>前面我们讲解了 express 中路由和模板引擎 ejs 的用法，但 express 的精髓并不在此，在于中间件的设计理念。</p>
+<p>express 中的中间件（middleware）就是用来处理请求的，当一个中间件处理完，可以通过调用 <code>next()</code> 传递给下一个中间件，如果没有调用 <code>next()</code>，则请求不会往下传递，如内置的 <code>res.render</code> 其实就是渲染完 html 直接返回给客户端，没有调用 <code>next()</code>，从而没有传递给下一个中间件。看个小例子，修改 index.js 如下：</p>
+<p><strong>index.js...</strong></p>
+            
+            <span class="read-more"><a href="/2020/01/31/3.4 Express 浅析/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="javascript:;"><b>「 </b>Article<b> 」</b></a>
+            
+            January 31, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/3.3 模板引擎/" title="模板引擎" class="posttitle">模板引擎</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>Words count</i>
+                        12k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                        11 mins.
+                    </span>
+                
+                
+            </p>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>模板引擎（Template Engine）是一个将页面模板和数据结合起来生成 html 的工具。上例中，我们只是返回纯文本给浏览器，现在我们修改代码返回一个 html 页面给浏览器。</p>
+<p>模板引擎有很多，<a href="https://www.npmjs.com/package/ejs" target="_blank" rel="noopener">ejs</a> 是其中一种，因为它使用起来十分简单，而且与 express 集成良好，所以我们使用 ejs。安装 ejs：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i ejs --save</span><br></pre></td></tr></table></figure>
+
+<p>修改 index.js 如下：</p>
+<p><strong>index.js</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const...</span></span></pre></td></tr></table></figure>
+            
+            <span class="read-more"><a href="/2020/01/31/3.3 模板引擎/" title="Read article" class="posttitle">Read article</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
 </div>
@@ -596,7 +669,7 @@
 
     </div>
     
-    <div id="pager"><a href="/page/2/" class="more" data-loading="Loading..." data-load-more="Load more">Load more</a></div>
+    <div id="pager"><a href="/page/3/" class="more" data-loading="Loading..." data-load-more="Load more">Load more</a></div>
     
 </div>
 <div id="preview"></div>
