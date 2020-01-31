@@ -122,10 +122,10 @@ Mac 用户向导：https://docs.mongodb.com/manu...
                                     </div>
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-content">
-                                        <a class="timeline-title" target="_self" href="/2020/01/31/4.15 部署/"></a>
+                                        <a class="timeline-title" target="_self" href="/2020/01/31/4.15 部署/">4.15.1 申请 MLab</a>
                                         <p>
-                                            4.15.1 申请 MLabMLab (前身是 MongoLab) 是一个 mongodb 云数据库提供商，我们可以选择 500MB 空间的免费套餐用来测试。注册成功后，点击右上角的 Create New 创建一个数据库（如: myblog），成功后点击进入到该数据库详情页，注意页面中有一行黄色的警告：
-1A database user is required to connect to t...
+                                            MLab (前身是 MongoLab) 是一个 mongodb 云数据库提供商，我们可以选择 500MB 空间的免费套餐用来测试。注册成功后，点击右上角的 Create New 创建一个数据库（如: myblog），成功后点击进入到该数据库详情页，注意页面中有一行黄色的警告：
+1A database user is required to connect to this database. ...
                                         </p>
                                     </div>
                                 </li>
@@ -154,14 +154,13 @@ Mac 用户向导：https://docs.mongodb.com/manu...
                                     </div>
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-content">
-                                        <a class="timeline-title" target="_self" href="/2020/01/31/4.13 日志/"></a>
+                                        <a class="timeline-title" target="_self" href="/2020/01/31/4.13 日志/">日志</a>
                                         <p>
-                                            
-title:日志现在我们来实现日志功能，日志分为正常请求的日志和错误请求的日志，我们希望实现这两种日志都打印到终端并写入文件。
+                                            现在我们来实现日志功能，日志分为正常请求的日志和错误请求的日志，我们希望实现这两种日志都打印到终端并写入文件。
 4.13.1 winston 和 express-winston我们使用 winston 和 express-winston 记录日志。
 新建 logs 目录存放日志文件，修改 index.js，在：
 index.js
-1const pkg = require('...
+1const pkg = require('./package...
                                         </p>
                                     </div>
                                 </li>
@@ -210,12 +209,11 @@ routes/index.js
                                     </div>
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-content">
-                                        <a class="timeline-title" target="_self" href="/2020/01/31/4.10 留言/"></a>
+                                        <a class="timeline-title" target="_self" href="/2020/01/31/4.10 留言/">留言</a>
                                         <p>
-                                            
-title:留言4.10.1 留言模型设计我们只需要留言的作者 id、留言内容和关联的文章 id 这几个字段，修改 lib/mongo.js，添加如下代码：
+                                            4.10.1 留言模型设计我们只需要留言的作者 id、留言内容和关联的文章 id 这几个字段，修改 lib/mongo.js，添加如下代码：
 lib/mongo.js
-123456exports.Comment = mongolass.model('Comment', &#123;  author: &#123; type: Mongolass.Types.ObjectId...
+123456exports.Comment = mongolass.model('Comment', &#123;  author: &#123; type: Mongolass.Types.ObjectId, require...
                                         </p>
                                     </div>
                                 </li>
@@ -227,12 +225,11 @@ lib/mongo.js
                                     </div>
                                     <div class="timeline-marker"></div>
                                     <div class="timeline-content">
-                                        <a class="timeline-title" target="_self" href="/2020/01/31/4.9 文章/"></a>
+                                        <a class="timeline-title" target="_self" href="/2020/01/31/4.9 文章/">文章模型设计</a>
                                         <p>
-                                            
-title:文章模型设计4.9.1 文章模型设计我们只存储文章的作者 id、标题、正文和点击量这几个字段，对应修改 lib/mongo.js，添加如下代码：
+                                            4.9.1 文章模型设计我们只存储文章的作者 id、标题、正文和点击量这几个字段，对应修改 lib/mongo.js，添加如下代码：
 lib/mongo.js
-1234567exports.Post = mongolass.model('Post', &#123;  author: &#123; type: Mongolass.Types.ObjectId, req...
+1234567exports.Post = mongolass.model('Post', &#123;  author: &#123; type: Mongolass.Types.ObjectId, required: true &...
                                         </p>
                                     </div>
                                 </li>
