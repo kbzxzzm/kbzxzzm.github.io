@@ -5,15 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>require 用来加载一个文件的代码，关于 require 的机制这里不展开讲解，请仔细阅读 [官方文档](https://nodejs.org/api/modules.html)。 - 浮雨博客</title>
+    <title>关于浮雨 - 浮雨博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="简单概括以下几点:
-
-require 可加载 .js、.json 和 .node 后缀的文件
-require 的过程是同步的，所以这样是错误的:123setTimeout(() =&amp;gt; &amp;#12,"> 
+    <meta name="description" content="关于浮雨一些话
+建站只是为了学习上面的事情，更多交流只为有更好的对web理解"> 
     <meta name="author" content="Floating Rain"> 
     <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -46,7 +44,7 @@ require 的过程是同步的，所以这样是错误的:123setTimeout(() =&amp;
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">require 用来加载一个文件的代码，关于 require 的机制这里不展开讲解，请仔细阅读 [官方文档](https://nodejs.org/api/modules.html)。</h3>
+        <h3 class="subtitle">关于浮雨</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -71,29 +69,30 @@ require 的过程是同步的，所以这样是错误的:123setTimeout(() =&amp;
             animation-duration: 1.2s;
             background-image: 
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/img/cover.jpg);">
+                url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1100806427,1038533635&fm=15&gp=0.jpg);">
         </div>
         <div class="else">
             <p class="animated fadeInDown">
                 
-                <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
+                <a href="/categories/关于"><b>「
+                    </b>关于<b> 」</b></a>
                 
                 一月 31, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/2.1 require/" title="require 用来加载一个文件的代码，关于 require 的机制这里不展开讲解，请仔细阅读 [官方文档](https://nodejs.org/api/modules.html)。">require 用来加载一个文件的代码，关于 require 的机制这里不展开讲解，请仔细阅读 [官方文档](https://nodejs.org/api/modules.html)。</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/01/31/about/" title="关于浮雨">关于浮雨</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    3k
+                    194
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    3 mins.
+                    1 mins.
                 </span>
                 
                 
@@ -105,6 +104,8 @@ require 的过程是同步的，所以这样是错误的:123setTimeout(() =&amp;
                 
             </p>
             
+            
+            <ul class="animated fadeInDown post-tags-list"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/about/">about</a></li></ul>
             
         </div>
     </div>
@@ -125,60 +126,13 @@ require 的过程是同步的，所以这样是错误的:123setTimeout(() =&amp;
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <p>简单概括以下几点:</p>
-<ul>
-<li>require 可加载 .js、.json 和 .node 后缀的文件</li>
-<li>require 的过程是同步的，所以这样是错误的:<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">  module.exports = &#123; a: <span class="string">'hello'</span> &#125;</span><br><span class="line">&#125;, 0)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>require 这个文件得到的是空对象 <code>{}</code></p>
-<ul>
-<li>require 目录的机制是:<ul>
-<li>如果目录下有 package.json 并指定了 main 字段，则用之</li>
-<li>如果不存在 package.json，则依次尝试加载目录下的 index.js 和 index.node</li>
-</ul>
-</li>
-<li>require 过的文件会加载到缓存，所以多次 require 同一个文件（模块）不会重复加载</li>
-<li>判断是否是程序的入口文件有两种方式:<ul>
-<li>require.main === module（推荐）</li>
-<li>module.parent === null</li>
-</ul>
-</li>
-</ul>
-<h4 id="循环引用"><a href="#循环引用" class="headerlink" title="循环引用"></a>循环引用</h4><p>循环引用（或循环依赖）简单点来说就是 a 文件 require 了 b 文件，然后 b 文件又反过来 require 了 a 文件。我们用 a-&gt;b 代表 b require 了 a。</p>
-<p>简单的情况:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a-&gt;b</span><br><span class="line">b-&gt;a</span><br></pre></td></tr></table></figure>
-
-<p>复杂点的情况:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a-&gt;b</span><br><span class="line">b-&gt;c</span><br><span class="line">c-&gt;a</span><br></pre></td></tr></table></figure>
-
-<p>循环引用并不会报错，导致的结果是 require 的结果是空对象 <code>{}</code>，原因是 b require 了 a，a 又去 require 了 b，此时 b 还没初始化好，所以只能拿到初始值 <code>{}</code>。当产生循环引用时一般有两种方法解决：</p>
-<ol>
-<li><p>通过分离共用的代码到另一个文件解决，如上面简单的情况，可拆出共用的代码到 c 中，如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">c-&gt;a</span><br><span class="line">c-&gt;b</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不在最外层 require，在用到的地方 require，通常在函数的内部</p>
-</li>
-</ol>
-<p>总的来说，循环依赖的陷阱并不大容易出现，但一旦出现了，对于新手来说还真不好定位。它的存在给我们提了个醒，要时刻注意你项目的依赖关系不要过于复杂，哪天你发现一个你明明已经 exports 了的方法报 <code>undefined is not a function</code>，我们就该提醒一下自己：哦，也许是它来了。</p>
-<p>官方示例: <a href="https://nodejs.org/api/modules.html#modules_cycles" target="_blank" rel="noopener">https://nodejs.org/api/modules.html#modules_cycles</a></p>
-<p>上一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/1.2%20MongoDB%20%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8.md" target="_blank" rel="noopener">1.2 MongoDB 的安装与使用</a></p>
-<p>下一节：<a href="https://github.com/nswbmw/N-blog/blob/master/book/2.2%20exports%20%E5%92%8C%20module.exports.md" target="_blank" rel="noopener">2.2 exports 和 module.exports</a></p>
-
+            <p>关于浮雨一些话</p>
+<h2 id="建站只是为了学习上面的事情，更多交流只为有更好的对web理解"><a href="#建站只是为了学习上面的事情，更多交流只为有更好的对web理解" class="headerlink" title="建站只是为了学习上面的事情，更多交流只为有更好的对web理解"></a>建站只是为了学习上面的事情，更多交流只为有更好的对web理解</h2>
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="true">
-                <source type="audio/mpeg" src="">
+                <source type="audio/mpeg" src="http://ef.sycdn.kuwo.cn/f709fbd132fed7c82045e82ee9fd6ff9/5e33883c/resource/n1/3/56/3990387546.mp3">
             </audio>
-            
-            <ul id="audio-list" style="display:none">
-                
-                
-                <li title='0' data-url='/statics/Kenny G-Right here waiting.mp3'></li>
-                
-                    
-            </ul>
             
             
             
@@ -219,6 +173,13 @@ require 的过程是同步的，所以这样是错误的:123setTimeout(() =&amp;
             </div>
             
             
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>目录</h4>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#建站只是为了学习上面的事情，更多交流只为有更好的对web理解"><span class="toc-number">1.</span> <span class="toc-text">建站只是为了学习上面的事情，更多交流只为有更好的对web理解</span></a></li></ol>
+                </div>
+            </div>
             
             
         </div>
