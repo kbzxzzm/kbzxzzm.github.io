@@ -5,13 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>This Is My Blog About Code - 浮雨博客</title>
+    <title>自定义播放器 - 浮雨博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="This is my bloghey welcome Floating Rain Blogshell scripts:
-1234567891011import React, &amp;#123; Compo,"> 
+    <meta name="description" content="自定义播放器目标
+独立完成自定义播放器处理浏览器表现不一致问题
+独立查找API完成自定义播放器功能
+
+知识内容api
+音频和视频API一致
+
+方法
+
+
+
+方法
+描述
+
+
+
+addTextTrack(,"> 
     <meta name="author" content="Floating Rain"> 
     <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -44,7 +59,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">This Is My Blog About Code</h3>
+        <h3 class="subtitle">自定义播放器</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -69,29 +84,29 @@
             animation-duration: 1.2s;
             background-image: 
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/img/cover.jpg);">
+                url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1100806427,1038533635&fm=15&gp=0.jpg);">
         </div>
         <div class="else">
             <p class="animated fadeInDown">
                 
                 <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
                 
-                一月 30, 2020
+                二月 14, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/blog/" title="This Is My Blog About Code">This Is My Blog About Code</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/02/14/07-自定义播放器/" title="自定义播放器">自定义播放器</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.4k
+                    6.5k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    1 mins.
+                    6 mins.
                 </span>
                 
                 
@@ -123,26 +138,273 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="This-is-my-blog"><a href="#This-is-my-blog" class="headerlink" title="This is my blog"></a>This is my blog</h1><h2 id="hey-welcome-Floating-Rain-Blog"><a href="#hey-welcome-Floating-Rain-Blog" class="headerlink" title="hey welcome Floating Rain Blog"></a>hey welcome Floating Rain Blog</h2><p>shell scripts:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from 'react'</span><br><span class="line"></span><br><span class="line">export default class 博客问题以及解决方案 extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>I don’t know some one before</p>
+            <h1 id="自定义播放器"><a href="#自定义播放器" class="headerlink" title="自定义播放器"></a>自定义播放器</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>独立完成自定义播放器处理浏览器表现不一致问题</li>
+<li>独立查找API完成自定义播放器功能</li>
+</ul>
+<h2 id="知识内容"><a href="#知识内容" class="headerlink" title="知识内容"></a>知识内容</h2><h3 id="api"><a href="#api" class="headerlink" title="api"></a>api</h3><blockquote>
+<p>音频和视频API一致</p>
 </blockquote>
+<p>方法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>addTextTrack()</td>
+<td>向音频/视频添加新的文本轨道</td>
+</tr>
+<tr>
+<td>canPlayType()</td>
+<td>检测浏览器是否能播放指定的音频/视频类型</td>
+</tr>
+<tr>
+<td>load()</td>
+<td>重新加载音频/视频元素</td>
+</tr>
+<tr>
+<td>play()</td>
+<td>开始播放音频/视频</td>
+</tr>
+<tr>
+<td>pause()</td>
+<td>暂停当前播放的音频/视频</td>
+</tr>
+</tbody></table>
+<p>属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>audioTracks</td>
+<td>返回表示可用音轨的 AudioTrackList 对象</td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>设置或返回是否在加载完成后随即播放音频/视频</td>
+</tr>
+<tr>
+<td>buffered</td>
+<td>返回表示音频/视频已缓冲部分的 TimeRanges 对象</td>
+</tr>
+<tr>
+<td>controller</td>
+<td>返回表示音频/视频当前媒体控制器的 MediaController 对象</td>
+</tr>
+<tr>
+<td>controls</td>
+<td>设置或返回音频/视频是否显示控件（比如播放/暂停等）</td>
+</tr>
+<tr>
+<td>crossOrigin</td>
+<td>设置或返回音频/视频的 CORS 设置</td>
+</tr>
+<tr>
+<td>currentSrc</td>
+<td>返回当前音频/视频的 URL</td>
+</tr>
+<tr>
+<td>currentTime</td>
+<td>设置或返回音频/视频中的当前播放位置（以秒计）</td>
+</tr>
+<tr>
+<td>defaultMuted</td>
+<td>设置或返回音频/视频默认是否静音</td>
+</tr>
+<tr>
+<td>defaultPlaybackRate</td>
+<td>设置或返回音频/视频的默认播放速度</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>返回当前音频/视频的长度（以秒计）</td>
+</tr>
+<tr>
+<td>ended</td>
+<td>返回音频/视频的播放是否已结束</td>
+</tr>
+<tr>
+<td>error</td>
+<td>返回表示音频/视频错误状态的 MediaError 对象</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>设置或返回音频/视频是否应在结束时重新播放</td>
+</tr>
+<tr>
+<td>mediaGroup</td>
+<td>设置或返回音频/视频所属的组合（用于连接多个音频/视频元素）</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>设置或返回音频/视频是否静音</td>
+</tr>
+<tr>
+<td>networkState</td>
+<td>返回音频/视频的当前网络状态</td>
+</tr>
+<tr>
+<td>paused</td>
+<td>设置或返回音频/视频是否暂停</td>
+</tr>
+<tr>
+<td>playbackRate</td>
+<td>设置或返回音频/视频播放的速度</td>
+</tr>
+<tr>
+<td>played</td>
+<td>返回表示音频/视频已播放部分的 TimeRanges 对象</td>
+</tr>
+<tr>
+<td>preload</td>
+<td>设置或返回音频/视频是否应该在页面加载后进行加载</td>
+</tr>
+<tr>
+<td>readyState</td>
+<td>返回音频/视频当前的就绪状态</td>
+</tr>
+<tr>
+<td>seekable</td>
+<td>返回表示音频/视频可寻址部分的 TimeRanges 对象</td>
+</tr>
+<tr>
+<td>seeking</td>
+<td>返回用户是否正在音频/视频中进行查找</td>
+</tr>
+<tr>
+<td>src</td>
+<td>设置或返回音频/视频元素的当前来源</td>
+</tr>
+<tr>
+<td>startDate</td>
+<td>返回表示当前时间偏移的 Date 对象</td>
+</tr>
+<tr>
+<td>textTracks</td>
+<td>返回表示可用文本轨道的 TextTrackList 对象</td>
+</tr>
+<tr>
+<td>videoTracks</td>
+<td>返回表示可用视频轨道的 VideoTrackList 对象</td>
+</tr>
+<tr>
+<td>volume</td>
+<td>设置或返回音频/视频的音量</td>
+</tr>
+</tbody></table>
+<p>事件</p>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>abort</td>
+<td>当音频/视频的加载已放弃时</td>
+</tr>
+<tr>
+<td>canplay</td>
+<td>当浏览器可以播放音频/视频时</td>
+</tr>
+<tr>
+<td>canplaythrough</td>
+<td>当浏览器可在不因缓冲而停顿的情况下进行播放时</td>
+</tr>
+<tr>
+<td>durationchange</td>
+<td>当音频/视频的时长已更改时</td>
+</tr>
+<tr>
+<td>emptied</td>
+<td>当目前的播放列表为空时</td>
+</tr>
+<tr>
+<td>ended</td>
+<td>当目前的播放列表已结束时</td>
+</tr>
+<tr>
+<td>error</td>
+<td>当在音频/视频加载期间发生错误时</td>
+</tr>
+<tr>
+<td>loadeddata</td>
+<td>当浏览器已加载音频/视频的当前帧时</td>
+</tr>
+<tr>
+<td>loadedmetadata</td>
+<td>当浏览器已加载音频/视频的元数据时</td>
+</tr>
+<tr>
+<td>loadstart</td>
+<td>当浏览器开始查找音频/视频时</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>当音频/视频已暂停时</td>
+</tr>
+<tr>
+<td>play</td>
+<td>当音频/视频已开始或不再暂停时</td>
+</tr>
+<tr>
+<td>playing</td>
+<td>当音频/视频在已因缓冲而暂停或停止后已就绪时</td>
+</tr>
+<tr>
+<td>progress</td>
+<td>当浏览器正在下载音频/视频时</td>
+</tr>
+<tr>
+<td>ratechange</td>
+<td>当音频/视频的播放速度已更改时</td>
+</tr>
+<tr>
+<td>seeked</td>
+<td>当用户已移动/跳跃到音频/视频中的新位置时</td>
+</tr>
+<tr>
+<td>seeking</td>
+<td>当用户开始移动/跳跃到音频/视频中的新位置时</td>
+</tr>
+<tr>
+<td>stalled</td>
+<td>当浏览器尝试获取媒体数据，但数据不可用时</td>
+</tr>
+<tr>
+<td>suspend</td>
+<td>当浏览器刻意不获取媒体数据时</td>
+</tr>
+<tr>
+<td>timeupdate</td>
+<td>当目前的播放位置已更改时</td>
+</tr>
+<tr>
+<td>volumechange</td>
+<td>当音量已更改时</td>
+</tr>
+<tr>
+<td>waiting</td>
+<td>当视频由于需要缓冲下一帧而停止</td>
+</tr>
+</tbody></table>
+<h3 id="细节注意"><a href="#细节注意" class="headerlink" title="细节注意"></a>细节注意</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*全屏操作后  自带的控制栏会显示  在显示的时候隐藏*/</span></span><br><span class="line"><span class="selector-tag">video</span><span class="selector-pseudo">::-webkit-media-controls</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: none <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.controls</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">700px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.2</span>);</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">4px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">350px</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="comment">/*比全屏的状态下的视频元素高*/</span></span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">100000000000</span>;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>需求驱动开发者使用什么API</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="true">
-                <source type="audio/mpeg" src="">
+                <source type="audio/mpeg" src="http://ef.sycdn.kuwo.cn/f709fbd132fed7c82045e82ee9fd6ff9/5e33883c/resource/n1/3/56/3990387546.mp3">
             </audio>
-            
-            <ul id="audio-list" style="display:none">
-                
-                
-                <li title='0' data-url='/statics/Kenny G-Right here waiting.mp3'></li>
-                
-                    
-            </ul>
             
             
             
@@ -187,7 +449,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#This-is-my-blog"><span class="toc-number">1.</span> <span class="toc-text">This is my blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hey-welcome-Floating-Rain-Blog"><span class="toc-number">1.1.</span> <span class="toc-text">hey welcome Floating Rain Blog</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#自定义播放器"><span class="toc-number">1.</span> <span class="toc-text">自定义播放器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目标"><span class="toc-number">1.1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识内容"><span class="toc-number">1.2.</span> <span class="toc-text">知识内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#api"><span class="toc-number">1.2.1.</span> <span class="toc-text">api</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#细节注意"><span class="toc-number">1.2.2.</span> <span class="toc-text">细节注意</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
                 </div>
             </div>
             

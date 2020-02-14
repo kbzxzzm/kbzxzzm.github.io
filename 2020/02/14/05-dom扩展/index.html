@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>This Is My Blog About Code - 浮雨博客</title>
+    <title>dom扩展 - 浮雨博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="This is my bloghey welcome Floating Rain Blogshell scripts:
-1234567891011import React, &amp;#123; Compo,"> 
+    <meta name="description" content="dom扩展目标
+能够使用H5扩展API完成页面效果
+
+扩展内容获取元素12345678document.getElementsByClassName (&#39;class&#39;); //通过类名获取元素，以伪,"> 
     <meta name="author" content="Floating Rain"> 
     <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -44,7 +46,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">This Is My Blog About Code</h3>
+        <h3 class="subtitle">dom扩展</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -69,29 +71,29 @@
             animation-duration: 1.2s;
             background-image: 
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/img/cover.jpg);">
+                url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1100806427,1038533635&fm=15&gp=0.jpg);">
         </div>
         <div class="else">
             <p class="animated fadeInDown">
                 
                 <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
                 
-                一月 30, 2020
+                二月 14, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/blog/" title="This Is My Blog About Code">This Is My Blog About Code</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/02/14/05-dom扩展/" title="dom扩展">dom扩展</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.4k
+                    6.8k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    1 mins.
+                    6 mins.
                 </span>
                 
                 
@@ -123,26 +125,25 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="This-is-my-blog"><a href="#This-is-my-blog" class="headerlink" title="This is my blog"></a>This is my blog</h1><h2 id="hey-welcome-Floating-Rain-Blog"><a href="#hey-welcome-Floating-Rain-Blog" class="headerlink" title="hey welcome Floating Rain Blog"></a>hey welcome Floating Rain Blog</h2><p>shell scripts:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from 'react'</span><br><span class="line"></span><br><span class="line">export default class 博客问题以及解决方案 extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h1 id="dom扩展"><a href="#dom扩展" class="headerlink" title="dom扩展"></a>dom扩展</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>能够使用H5扩展API完成页面效果</li>
+</ul>
+<h2 id="扩展内容"><a href="#扩展内容" class="headerlink" title="扩展内容"></a>扩展内容</h2><h3 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementsByClassName (<span class="string">'class'</span>); </span><br><span class="line"><span class="comment">//通过类名获取元素，以伪数组形式存在。</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'selector'</span>);</span><br><span class="line"><span class="comment">//通过CSS选择器获取元素，符合匹配条件的第1个元素。</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.querySelectorAll(<span class="string">'selector'</span>); </span><br><span class="line"><span class="comment">//通过CSS选择器获取元素，以伪数组形式存在。</span></span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>I don’t know some one before</p>
+<h3 id="类名操作"><a href="#类名操作" class="headerlink" title="类名操作"></a>类名操作</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Node.classList.add(<span class="string">'class'</span>); </span><br><span class="line"><span class="comment">//添加class</span></span><br><span class="line"></span><br><span class="line">Node.classList.remove(<span class="string">'class'</span>); </span><br><span class="line"><span class="comment">//移除class</span></span><br><span class="line"></span><br><span class="line">Node.classList.toggle(<span class="string">'class'</span>); </span><br><span class="line"><span class="comment">//切换class，有则移除，无则添加</span></span><br><span class="line"></span><br><span class="line">Node.classList.contains(<span class="string">'class'</span>); </span><br><span class="line"><span class="comment">//检测是否存在class</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h3><blockquote>
+<p>在HTML5中我们可以自定义属性，其格式如下data-*=””</p>
 </blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"demo"</span> <span class="attr">data-my-name</span>=<span class="string">"itcast"</span> <span class="attr">data-age</span>=<span class="string">"10"</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--1. 大家理解的自定义属性：自己定义的属性--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--2. 非标准属性：就是自定义属性--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--3. 像：name class id title alt 标准属性  反之 非标准--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--H5规范 用来存储数据的属性 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--4. 以 data- 开始的属性认为是自定义属性 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--5. 操作自定义属性注意些：--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--6. dataset对象 指定的是当前dom元素上的自定义属性的集合 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--7. 获取自定义属性：dataset.属性名称 dataset[属性名称] --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--8. 设置自定义属性： dataset.属性名称 = 属性值   dataset[属性名称] = 属性值 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--9. 自定义属性的名称遵从驼峰命名 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--10. dom上的属性的定义 不支持大写 写了也转换成小写--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line">/*</span><br><span class="line">  Node.dataset是以对象形式存在的，当我们为同一个DOM节点指定了多个自定义属性时，</span><br><span class="line">  Node.dataset则存储了所有的自定义属性的值。</span><br><span class="line">  */</span><br><span class="line"><span class="javascript"><span class="keyword">var</span> demo = <span class="built_in">document</span>.querySelector(反馈);</span></span><br><span class="line"><span class="javascript"><span class="comment">//获取</span></span></span><br><span class="line"><span class="javascript"><span class="comment">//注：当我们如下格式设置时，则需要以驼峰格式才能正确获取</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> name = demo.dataset[<span class="string">'myName'</span>];</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> age = demo.dataset[<span class="string">'age'</span>];</span></span><br><span class="line"><span class="javascript"><span class="comment">//设置</span></span></span><br><span class="line"><span class="javascript">demo.dataset[<span class="string">'name'</span>] = <span class="string">'web developer'</span>;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>/&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在不使用第三方库的情况下，使用最便捷的方式操作DOM，完成页面效果</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="true">
-                <source type="audio/mpeg" src="">
+                <source type="audio/mpeg" src="http://ef.sycdn.kuwo.cn/f709fbd132fed7c82045e82ee9fd6ff9/5e33883c/resource/n1/3/56/3990387546.mp3">
             </audio>
-            
-            <ul id="audio-list" style="display:none">
-                
-                
-                <li title='0' data-url='/statics/Kenny G-Right here waiting.mp3'></li>
-                
-                    
-            </ul>
             
             
             
@@ -187,7 +188,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#This-is-my-blog"><span class="toc-number">1.</span> <span class="toc-text">This is my blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hey-welcome-Floating-Rain-Blog"><span class="toc-number">1.1.</span> <span class="toc-text">hey welcome Floating Rain Blog</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#dom扩展"><span class="toc-number">1.</span> <span class="toc-text">dom扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目标"><span class="toc-number">1.1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#扩展内容"><span class="toc-number">1.2.</span> <span class="toc-text">扩展内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取元素"><span class="toc-number">1.2.1.</span> <span class="toc-text">获取元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类名操作"><span class="toc-number">1.2.2.</span> <span class="toc-text">类名操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义属性"><span class="toc-number">1.2.3.</span> <span class="toc-text">自定义属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
                 </div>
             </div>
             

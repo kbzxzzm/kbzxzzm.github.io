@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>This Is My Blog About Code - 浮雨博客</title>
+    <title>本地存储 - 浮雨博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="This is my bloghey welcome Floating Rain Blogshell scripts:
-1234567891011import React, &amp;#123; Compo,"> 
+    <meta name="description" content="本地存储目标
+掌握客户端存储技术
+应用本地存储在开发中
+
+知识内容document.cookie使用：
+121. 设置cookie数据：document.cookie = &amp;apos;键=值;Exp,"> 
     <meta name="author" content="Floating Rain"> 
     <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -44,7 +48,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">This Is My Blog About Code</h3>
+        <h3 class="subtitle">本地存储</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -69,29 +73,29 @@
             animation-duration: 1.2s;
             background-image: 
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/img/cover.jpg);">
+                url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1100806427,1038533635&fm=15&gp=0.jpg);">
         </div>
         <div class="else">
             <p class="animated fadeInDown">
                 
                 <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
                 
-                一月 30, 2020
+                二月 14, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/blog/" title="This Is My Blog About Code">This Is My Blog About Code</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/02/14/09-本地存储/" title="本地存储">本地存储</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.4k
+                    3.5k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    1 mins.
+                    3 mins.
                 </span>
                 
                 
@@ -123,26 +127,68 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="This-is-my-blog"><a href="#This-is-my-blog" class="headerlink" title="This is my blog"></a>This is my blog</h1><h2 id="hey-welcome-Floating-Rain-Blog"><a href="#hey-welcome-Floating-Rain-Blog" class="headerlink" title="hey welcome Floating Rain Blog"></a>hey welcome Floating Rain Blog</h2><p>shell scripts:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from 'react'</span><br><span class="line"></span><br><span class="line">export default class 博客问题以及解决方案 extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h1 id="本地存储"><a href="#本地存储" class="headerlink" title="本地存储"></a>本地存储</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>掌握客户端存储技术</li>
+<li>应用本地存储在开发中</li>
+</ul>
+<h2 id="知识内容"><a href="#知识内容" class="headerlink" title="知识内容"></a>知识内容</h2><h3 id="document-cookie"><a href="#document-cookie" class="headerlink" title="document.cookie"></a>document.cookie</h3><p>使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 设置cookie数据：document.cookie = &apos;键=值;Expires=日期&apos;</span><br><span class="line">2. 获取cookie数据：document.cookie</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>I don’t know some one before</p>
-</blockquote>
+<p>1、如果没有设置有效期，会话结束就失效<br>2、如果设置有效期，依据有效期时间失效<br>3、在会话过程中，每次请求在报文的头部会携带cookie信息</p>
+<h3 id="window-sessionStorage"><a href="#window-sessionStorage" class="headerlink" title="window.sessionStorage"></a>window.sessionStorage</h3><p>使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.获取sessionStorage的长度：window.sessionStorage.length</span><br><span class="line">2.根据对应的索引去获取对应sessionStorage的key的值：window.sessionStorage.key(索引);</span><br><span class="line">3.添加/编辑sessionStorage的内容：window.sessionStorage.setItem(键,值);</span><br><span class="line">4.根据对应的key获取对应的的value：window.sessionStorage.getItem(键);</span><br><span class="line">5.根据对应的key删除记录：window.sessionStorage.removeItem(键);</span><br><span class="line">6.清空存储：window.sessionStorage.clear();</span><br></pre></td></tr></table></figure>
+
+<p>1、生命周期为关闭浏览器窗口<br>2、在同一个窗口(页面)下数据可以共享</p>
+<h3 id="window-localStorage"><a href="#window-localStorage" class="headerlink" title="window.localStorage"></a>window.localStorage</h3><p>使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1.获取localStorage的长度：window.localStorage.length</span><br><span class="line">2.根据对应的索引去获取对应localStorage的key的值：window.localStorage.key(索引);</span><br><span class="line">3.添加/编辑localStorage的内容：window.localStorage.setItem(键,值);</span><br><span class="line">4.根据对应的key获取对应的的value：window.localStorage.getItem(键);</span><br><span class="line">5.根据对应的key删除记录：window.localStorage.removeItem(键);</span><br><span class="line">6.清空存储：window.localStorage.clear();</span><br></pre></td></tr></table></figure>
+
+<p>1、永久生效，除非手动删除 关闭页面也会存在<br>2、可以多窗口（页面）共享（同一浏览器可以共享）</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>cookie</th>
+<th>sessionStorage</th>
+<th>localStorage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据生命期</td>
+<td>默认关闭浏览器失效</td>
+<td>页面会话期间可用</td>
+<td>除非数据被清除，否则一直存在</td>
+</tr>
+<tr>
+<td>存放数据大小</td>
+<td>4K左右（因为每次http请求都会携带cookie）</td>
+<td>一般5M或更大</td>
+<td>约20M</td>
+</tr>
+<tr>
+<td>与服务器通信</td>
+<td>由对服务器的请求来传递，每次都会携带在HTTP头中，如果使用cookie保存过多数据会带来性能问题</td>
+<td>数据不是由每个服务器请求传递的，而是只有在请求时使用数据，不参与和服务器的通信</td>
+<td></td>
+</tr>
+<tr>
+<td>易用性</td>
+<td>cookie需要自己封装setCookie，getCookie</td>
+<td>可以用源生接口</td>
+<td></td>
+</tr>
+<tr>
+<td>共同点</td>
+<td>都是保存在浏览器端，和服务器端的session机制不同</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="true">
-                <source type="audio/mpeg" src="">
+                <source type="audio/mpeg" src="http://ef.sycdn.kuwo.cn/f709fbd132fed7c82045e82ee9fd6ff9/5e33883c/resource/n1/3/56/3990387546.mp3">
             </audio>
-            
-            <ul id="audio-list" style="display:none">
-                
-                
-                <li title='0' data-url='/statics/Kenny G-Right here waiting.mp3'></li>
-                
-                    
-            </ul>
             
             
             
@@ -187,7 +233,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#This-is-my-blog"><span class="toc-number">1.</span> <span class="toc-text">This is my blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hey-welcome-Floating-Rain-Blog"><span class="toc-number">1.1.</span> <span class="toc-text">hey welcome Floating Rain Blog</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#本地存储"><span class="toc-number">1.</span> <span class="toc-text">本地存储</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目标"><span class="toc-number">1.1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识内容"><span class="toc-number">1.2.</span> <span class="toc-text">知识内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#document-cookie"><span class="toc-number">1.2.1.</span> <span class="toc-text">document.cookie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#window-sessionStorage"><span class="toc-number">1.2.2.</span> <span class="toc-text">window.sessionStorage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#window-localStorage"><span class="toc-number">1.2.3.</span> <span class="toc-text">window.localStorage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
                 </div>
             </div>
             

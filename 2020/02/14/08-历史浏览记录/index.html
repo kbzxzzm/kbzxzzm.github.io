@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>This Is My Blog About Code - 浮雨博客</title>
+    <title>历史浏览记录 - 浮雨博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="This is my bloghey welcome Floating Rain Blogshell scripts:
-1234567891011import React, &amp;#123; Compo,"> 
+    <meta name="description" content="history目标
+掌握新增API的使用
+理解在单页面应用程序的使用
+
+知识内容解释API
+pushState(data, title, url) 追加一条历史记录  
+
+data用于存储自定义数据,"> 
     <meta name="author" content="Floating Rain"> 
     <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -44,7 +50,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">This Is My Blog About Code</h3>
+        <h3 class="subtitle">历史浏览记录</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -69,23 +75,23 @@
             animation-duration: 1.2s;
             background-image: 
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/img/cover.jpg);">
+                url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1100806427,1038533635&fm=15&gp=0.jpg);">
         </div>
         <div class="else">
             <p class="animated fadeInDown">
                 
                 <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
                 
-                一月 30, 2020
+                二月 14, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/blog/" title="This Is My Blog About Code">This Is My Blog About Code</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/02/14/08-历史浏览记录/" title="历史浏览记录">历史浏览记录</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.4k
+                    1.1k
                 </span>
                 
                 
@@ -123,26 +129,38 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="This-is-my-blog"><a href="#This-is-my-blog" class="headerlink" title="This is my blog"></a>This is my blog</h1><h2 id="hey-welcome-Floating-Rain-Blog"><a href="#hey-welcome-Floating-Rain-Blog" class="headerlink" title="hey welcome Floating Rain Blog"></a>hey welcome Floating Rain Blog</h2><p>shell scripts:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from 'react'</span><br><span class="line"></span><br><span class="line">export default class 博客问题以及解决方案 extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>I don’t know some one before</p>
-</blockquote>
+            <h1 id="history"><a href="#history" class="headerlink" title="history"></a>history</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>掌握新增API的使用</li>
+<li>理解在单页面应用程序的使用</li>
+</ul>
+<h2 id="知识内容"><a href="#知识内容" class="headerlink" title="知识内容"></a>知识内容</h2><h3 id="解释API"><a href="#解释API" class="headerlink" title="解释API"></a>解释API</h3><ul>
+<li><p><code>pushState(data, title, url)</code> 追加一条历史记录  </p>
+<ul>
+<li><p>data用于存储自定义数据，通常设为null</p>
+<ul>
+<li>title历史记录标题，基本上没有被支持，一般设为空</li>
+</ul>
+<p>​+ url 以当前域为基础增加一条历史记录，不可跨域设置</p>
+</li>
+</ul>
+</li>
+<li><p><code>replaceState(data, title, url)</code> 与pushState()基本相同，<br>不同之处在于replaceState()，只是替换当前url，不会增加/减少历史记录。</p>
+</li>
+<li><p><code>popstate</code>事件，当前进或后退时则触发  </p>
+</li>
+</ul>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ul>
+<li>在单页面应用程序中，改变地址栏，不发生跳转，使用异步更新网页局部内容</li>
+<li>在单页面应用程序中，回退前进历史的时候，更新网页局部内容</li>
+<li>常用在对用户体验性能要求较高，有需要去满足SEO的网站</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在淘宝的搜索页使用这个技术 ，很好的提高了用户体验</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="true">
-                <source type="audio/mpeg" src="">
+                <source type="audio/mpeg" src="http://ef.sycdn.kuwo.cn/f709fbd132fed7c82045e82ee9fd6ff9/5e33883c/resource/n1/3/56/3990387546.mp3">
             </audio>
-            
-            <ul id="audio-list" style="display:none">
-                
-                
-                <li title='0' data-url='/statics/Kenny G-Right here waiting.mp3'></li>
-                
-                    
-            </ul>
             
             
             
@@ -187,7 +205,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#This-is-my-blog"><span class="toc-number">1.</span> <span class="toc-text">This is my blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hey-welcome-Floating-Rain-Blog"><span class="toc-number">1.1.</span> <span class="toc-text">hey welcome Floating Rain Blog</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#history"><span class="toc-number">1.</span> <span class="toc-text">history</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目标"><span class="toc-number">1.1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识内容"><span class="toc-number">1.2.</span> <span class="toc-text">知识内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解释API"><span class="toc-number">1.2.1.</span> <span class="toc-text">解释API</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#应用场景"><span class="toc-number">1.2.2.</span> <span class="toc-text">应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
                 </div>
             </div>
             

@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>This Is My Blog About Code - 浮雨博客</title>
+    <title>jquery插件全屏切换 - 浮雨博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="This is my bloghey welcome Floating Rain Blogshell scripts:
-1234567891011import React, &amp;#123; Compo,"> 
+    <meta name="description" content="全屏切换目标
+掌握fullpage的使用完成全屏切换效果
+
+fullpage插件简单介绍
+基于 jQuery 的插件，它能够帮你很方便、很轻松的制作出全屏网站。
+支持鼠标滚动，支持前进后退和键盘控制,"> 
     <meta name="author" content="Floating Rain"> 
     <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -44,7 +48,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">This Is My Blog About Code</h3>
+        <h3 class="subtitle">jquery插件全屏切换</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -69,29 +73,29 @@
             animation-duration: 1.2s;
             background-image: 
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/img/cover.jpg);">
+                url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1100806427,1038533635&fm=15&gp=0.jpg);">
         </div>
         <div class="else">
             <p class="animated fadeInDown">
                 
                 <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
                 
-                一月 30, 2020
+                二月 14, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/blog/" title="This Is My Blog About Code">This Is My Blog About Code</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/02/14/04-fullpage/" title="jquery插件全屏切换">jquery插件全屏切换</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.4k
+                    8.9k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    1 mins.
+                    8 mins.
                 </span>
                 
                 
@@ -123,26 +127,306 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="This-is-my-blog"><a href="#This-is-my-blog" class="headerlink" title="This is my blog"></a>This is my blog</h1><h2 id="hey-welcome-Floating-Rain-Blog"><a href="#hey-welcome-Floating-Rain-Blog" class="headerlink" title="hey welcome Floating Rain Blog"></a>hey welcome Floating Rain Blog</h2><p>shell scripts:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from 'react'</span><br><span class="line"></span><br><span class="line">export default class 博客问题以及解决方案 extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h1 id="全屏切换"><a href="#全屏切换" class="headerlink" title="全屏切换"></a>全屏切换</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>掌握fullpage的使用完成全屏切换效果</li>
+</ul>
+<h2 id="fullpage插件"><a href="#fullpage插件" class="headerlink" title="fullpage插件"></a>fullpage插件</h2><h3 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h3><ul>
+<li>基于 jQuery 的插件，它能够帮你很方便、很轻松的制作出全屏网站。</li>
+<li>支持鼠标滚动，支持前进后退和键盘控制，多个回调函数，<br>支持手机、平板触摸事件，支持 CSS3 动画，支持窗口缩放，窗口缩放时自动调整，<br>可设置滚动宽度、背景颜色、滚动速度、循环选项、回调、文本对齐方式等等。</li>
+<li>参考文档：<a href="http://www.dowebok.com/demo/2014/77/" target="_blank" rel="noopener">http://www.dowebok.com/demo/2014/77/</a></li>
+</ul>
+<h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><ul>
+<li><p>引用文件</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"css/jquery.fullPage.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/jquery.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"js/jquery.fullPage.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>I don’t know some one before</p>
-</blockquote>
+<ul>
+<li><p>html结构</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"fullpage"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section"</span>&gt;</span>第一屏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section"</span>&gt;</span>第二屏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"slide"</span>&gt;</span>第三屏的第一屏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"slide"</span>&gt;</span>第三屏的第二屏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"slide"</span>&gt;</span>第三屏的第三屏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"slide"</span>&gt;</span>第三屏的第四屏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"section"</span>&gt;</span>第四屏<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>js初始化</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">'#fullpage'</span>).fullpage();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="参考api"><a href="#参考api" class="headerlink" title="参考api"></a>参考api</h3><ul>
+<li>配置</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>verticalCentered</td>
+<td>字符串</td>
+<td>true</td>
+<td>内容是否垂直居中</td>
+</tr>
+<tr>
+<td>resize</td>
+<td>布尔值</td>
+<td>false</td>
+<td>字体是否随着窗口缩放而缩放</td>
+</tr>
+<tr>
+<td>sectionsColor</td>
+<td>数组</td>
+<td>无</td>
+<td>设置背景颜色</td>
+</tr>
+<tr>
+<td>anchors</td>
+<td>数组</td>
+<td>无</td>
+<td>定义锚链接</td>
+</tr>
+<tr>
+<td>scrollingSpeed</td>
+<td>整数</td>
+<td>700</td>
+<td>滚动速度，单位为毫秒</td>
+</tr>
+<tr>
+<td>easing</td>
+<td>字符串</td>
+<td>easeInQuart</td>
+<td>滚动动画方式</td>
+</tr>
+<tr>
+<td>menu</td>
+<td>布尔值</td>
+<td>false</td>
+<td>绑定菜单，设定的相关属性与 anchors 的值对应后，菜单可以控制滚动</td>
+</tr>
+<tr>
+<td>navigation</td>
+<td>布尔值</td>
+<td>false</td>
+<td>是否显示项目导航</td>
+</tr>
+<tr>
+<td>navigationPosition</td>
+<td>字符串</td>
+<td>right</td>
+<td>项目导航的位置，可选 left 或 right</td>
+</tr>
+<tr>
+<td>navigationColor</td>
+<td>字符串</td>
+<td>#000</td>
+<td>项目导航的颜色</td>
+</tr>
+<tr>
+<td>navigationTooltips</td>
+<td>数组</td>
+<td>空</td>
+<td>项目导航的 tip</td>
+</tr>
+<tr>
+<td>slidesNavigation</td>
+<td>布尔值</td>
+<td>false</td>
+<td>是否显示左右滑块的项目导航</td>
+</tr>
+<tr>
+<td>slidesNavPosition</td>
+<td>字符串</td>
+<td>bottom</td>
+<td>左右滑块的项目导航的位置，可选 top 或 bottom</td>
+</tr>
+<tr>
+<td>controlArrowColor</td>
+<td>字符串</td>
+<td>#fff</td>
+<td>左右滑块的箭头的背景颜色</td>
+</tr>
+<tr>
+<td>loopBottom</td>
+<td>布尔值</td>
+<td>false</td>
+<td>滚动到最底部后是否滚回顶部</td>
+</tr>
+<tr>
+<td>loopTop</td>
+<td>布尔值</td>
+<td>false</td>
+<td>滚动到最顶部后是否滚底部</td>
+</tr>
+<tr>
+<td>loopHorizontal</td>
+<td>布尔值</td>
+<td>true</td>
+<td>左右滑块是否循环滑动</td>
+</tr>
+<tr>
+<td>autoScrolling</td>
+<td>布尔值</td>
+<td>true</td>
+<td>是否使用插件的滚动方式，如果选择 false，则会出现浏览器自带的滚动条</td>
+</tr>
+<tr>
+<td>scrollOverflow</td>
+<td>布尔值</td>
+<td>false</td>
+<td>内容超过满屏后是否显示滚动条</td>
+</tr>
+<tr>
+<td>css3</td>
+<td>布尔值</td>
+<td>false</td>
+<td>是否使用 CSS3 transforms 滚动</td>
+</tr>
+<tr>
+<td>paddingTop</td>
+<td>字符串</td>
+<td>0</td>
+<td>与顶部的距离</td>
+</tr>
+<tr>
+<td>paddingBottom</td>
+<td>字符串</td>
+<td>0</td>
+<td>与底部距离</td>
+</tr>
+<tr>
+<td>fixedElements</td>
+<td>字符串</td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>normalScrollElements</td>
+<td></td>
+<td>无</td>
+<td></td>
+</tr>
+<tr>
+<td>keyboardScrolling</td>
+<td>布尔值</td>
+<td>true</td>
+<td>是否使用键盘方向键导航</td>
+</tr>
+<tr>
+<td>touchSensitivity</td>
+<td>整数</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>continuousVertical</td>
+<td>布尔值</td>
+<td>false</td>
+<td>是否循环滚动，与 loopTop 及 loopBottom 不兼容</td>
+</tr>
+<tr>
+<td>animateAnchor</td>
+<td>布尔值</td>
+<td>true</td>
+<td></td>
+</tr>
+<tr>
+<td>normalScrollElementTouchThreshold</td>
+<td>整数</td>
+<td>5</td>
+<td>-</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>方法</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>moveSectionUp()</td>
+<td>向上滚动</td>
+</tr>
+<tr>
+<td>moveSectionDown()</td>
+<td>向下滚动</td>
+</tr>
+<tr>
+<td>moveTo(section, slide)</td>
+<td>滚动到</td>
+</tr>
+<tr>
+<td>moveSlideRight()</td>
+<td>slide 向右滚动</td>
+</tr>
+<tr>
+<td>moveSlideLeft()</td>
+<td>slide 向左滚动</td>
+</tr>
+<tr>
+<td>setAutoScrolling()</td>
+<td>设置页面滚动方式，设置为 true 时自动滚动</td>
+</tr>
+<tr>
+<td>setAllowScrolling()</td>
+<td>添加或删除鼠标滚轮/触控板控制</td>
+</tr>
+<tr>
+<td>setKeyboardScrolling()</td>
+<td>添加或删除键盘方向键控制</td>
+</tr>
+<tr>
+<td>setScrollingSpeed()</td>
+<td>定义以毫秒为单位的滚动速度</td>
+</tr>
+</tbody></table>
+<ul>
+<li>回调函数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>afterLoad</td>
+<td>滚动到某一屏后的回调函数，接收 anchorLink 和 index 两个参数，anchorLink 是锚链接的名称，index 是序号，从1开始计算</td>
+</tr>
+<tr>
+<td>onLeave</td>
+<td>滚动前的回调函数，接收 index、nextIndex 和 direction 3个参数：index 是离开的“页面”的序号，从1开始计算；nextIndex 是滚动到的“页面”的序号，从1开始计算；direction 判断往上滚动还是往下滚动，值是 up 或 down。</td>
+</tr>
+<tr>
+<td>afterRender</td>
+<td>页面结构生成后的回调函数，或者说页面初始化完成后的回调函数</td>
+</tr>
+<tr>
+<td>afterSlideLoad</td>
+<td>滚动到某一水平滑块后的回调函数，与 afterLoad 类似，接收 anchorLink、index、slideIndex、direction 4个参数</td>
+</tr>
+<tr>
+<td>onSlideLeave</td>
+<td>某一水平滑块滚动前的回调函数，与 onLeave 类似，接收 anchorLink、index、slideIndex、direction 4个参数</td>
+</tr>
+</tbody></table>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="true">
-                <source type="audio/mpeg" src="">
+                <source type="audio/mpeg" src="http://ef.sycdn.kuwo.cn/f709fbd132fed7c82045e82ee9fd6ff9/5e33883c/resource/n1/3/56/3990387546.mp3">
             </audio>
-            
-            <ul id="audio-list" style="display:none">
-                
-                
-                <li title='0' data-url='/statics/Kenny G-Right here waiting.mp3'></li>
-                
-                    
-            </ul>
             
             
             
@@ -187,7 +471,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#This-is-my-blog"><span class="toc-number">1.</span> <span class="toc-text">This is my blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hey-welcome-Floating-Rain-Blog"><span class="toc-number">1.1.</span> <span class="toc-text">hey welcome Floating Rain Blog</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#全屏切换"><span class="toc-number">1.</span> <span class="toc-text">全屏切换</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目标"><span class="toc-number">1.1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fullpage插件"><span class="toc-number">1.2.</span> <span class="toc-text">fullpage插件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单介绍"><span class="toc-number">1.2.1.</span> <span class="toc-text">简单介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用步骤"><span class="toc-number">1.2.2.</span> <span class="toc-text">使用步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考api"><span class="toc-number">1.2.3.</span> <span class="toc-text">参考api</span></a></li></ol></li></ol></li></ol>
                 </div>
             </div>
             

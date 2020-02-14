@@ -5,13 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>This Is My Blog About Code - 浮雨博客</title>
+    <title>拖拽上传 - 浮雨博客</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="TriDiamond Obsidian,"> 
-    <meta name="description" content="This is my bloghey welcome Floating Rain Blogshell scripts:
-1234567891011import React, &amp;#123; Compo,"> 
+    <meta name="description" content="拖拽上传目标
+掌握并使用拖拽事件
+结合拖拽事件完成拖拽上传
+
+知识内容拖拽事件
+拖拽元素
+ondrag     应用于拖拽元素，整个拖拽过程都会调用
+ondragstart应用于拖拽元素，当拖拽开始,"> 
     <meta name="author" content="Floating Rain"> 
     <link rel="alternative" href="atom.xml" title="浮雨博客" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -44,7 +50,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://kbzxzzm.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">This Is My Blog About Code</h3>
+        <h3 class="subtitle">拖拽上传</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -69,29 +75,29 @@
             animation-duration: 1.2s;
             background-image: 
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/img/cover.jpg);">
+                url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1100806427,1038533635&fm=15&gp=0.jpg);">
         </div>
         <div class="else">
             <p class="animated fadeInDown">
                 
                 <a href="javascript:;"><b>「 </b>文章<b> 」</b></a>
                 
-                一月 30, 2020
+                二月 14, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/01/30/blog/" title="This Is My Blog About Code">This Is My Blog About Code</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/02/14/10-拖拽上传/" title="拖拽上传">拖拽上传</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.4k
+                    9k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    1 mins.
+                    8 mins.
                 </span>
                 
                 
@@ -123,26 +129,39 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <h1 id="This-is-my-blog"><a href="#This-is-my-blog" class="headerlink" title="This is my blog"></a>This is my blog</h1><h2 id="hey-welcome-Floating-Rain-Blog"><a href="#hey-welcome-Floating-Rain-Blog" class="headerlink" title="hey welcome Floating Rain Blog"></a>hey welcome Floating Rain Blog</h2><p>shell scripts:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from 'react'</span><br><span class="line"></span><br><span class="line">export default class 博客问题以及解决方案 extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <h1 id="拖拽上传"><a href="#拖拽上传" class="headerlink" title="拖拽上传"></a>拖拽上传</h1><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>掌握并使用拖拽事件</li>
+<li>结合拖拽事件完成拖拽上传</li>
+</ul>
+<h2 id="知识内容"><a href="#知识内容" class="headerlink" title="知识内容"></a>知识内容</h2><h3 id="拖拽事件"><a href="#拖拽事件" class="headerlink" title="拖拽事件"></a>拖拽事件</h3><ul>
+<li>拖拽元素<ul>
+<li>ondrag     应用于拖拽元素，整个拖拽过程都会调用<ul>
+<li>ondragstart应用于拖拽元素，当拖拽开始时调用</li>
+<li>ondragleave应用于拖拽元素，当鼠标离开拖拽元素时调用</li>
+<li>ondragend应用于拖拽元素，当拖拽结束时调用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>目标元素<ul>
+<li>ondragenter应用于目标元素，当拖拽元素进入时调用<ul>
+<li>ondragover应用于目标元素，当停留在目标元素上时调用</li>
+<li>ondrop应用于目标元素，当在目标元素上松开鼠标时调用</li>
+<li>ondragleave应用于目标元素，当鼠标离开目标元素时调用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="拖拽上传-1"><a href="#拖拽上传-1" class="headerlink" title="拖拽上传"></a>拖拽上传</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css">        <span class="selector-class">.box</span> &#123;</span></span><br><span class="line">            width: 200px;</span><br><span class="line">            height: 200px;</span><br><span class="line"><span class="css">            <span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">dashed</span> <span class="selector-id">#ccc</span>;</span></span><br><span class="line">            line-height: 200px;</span><br><span class="line">            text-align: center;</span><br><span class="line"><span class="css">            <span class="selector-tag">color</span>: <span class="selector-id">#ccc</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span>拖放图片到该区域<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> box = <span class="built_in">document</span>.querySelector(<span class="string">'.box'</span>);</span></span><br><span class="line"><span class="javascript">    box.addEventListener(<span class="string">'dragenter'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">/*禁用浏览器默认预览文件或下载文件操作*/</span></span></span><br><span class="line">        e.preventDefault();</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="javascript">    box.addEventListener(<span class="string">'dragover'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">/*禁用浏览器默认预览文件或下载文件操作*/</span></span></span><br><span class="line">        e.preventDefault();</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="javascript">    box.addEventListener(<span class="string">'drop'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line">        e.preventDefault();</span><br><span class="line"><span class="javascript">        <span class="comment">/*第一个文件数据*/</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> file = e.dataTransfer.files[<span class="number">0</span>];</span></span><br><span class="line"><span class="javascript">        <span class="comment">//console.log(file);</span></span></span><br><span class="line"><span class="javascript">        <span class="comment">/*把数据设置到表单数据中*/</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> formData = <span class="keyword">new</span> FormData();</span></span><br><span class="line"><span class="javascript">        formData.append(<span class="string">'dragImage'</span>, file);</span></span><br><span class="line"><span class="javascript">        <span class="comment">/*通过ajax异步提交*/</span></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span></span><br><span class="line"><span class="javascript">        xhr.open(<span class="string">'post'</span>,<span class="string">'upload.php'</span>);</span></span><br><span class="line">        xhr.send(formData);</span><br><span class="line"><span class="javascript">        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line">            if(xhr.readyState == 4 &amp;&amp; xhr.status == 200)&#123;</span><br><span class="line"><span class="javascript">                <span class="comment">/*上传成功*/</span></span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">'ok'</span>);</span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> img = <span class="keyword">new</span> Image();</span></span><br><span class="line">                img.src = xhr.responseText;</span><br><span class="line"><span class="javascript">                <span class="built_in">document</span>.querySelector(<span class="string">'body'</span>).appendChild(img);</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>I don’t know some one before</p>
-</blockquote>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在支持H5的浏览器中可使用拖拽上传</p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="true">
-                <source type="audio/mpeg" src="">
+                <source type="audio/mpeg" src="http://ef.sycdn.kuwo.cn/f709fbd132fed7c82045e82ee9fd6ff9/5e33883c/resource/n1/3/56/3990387546.mp3">
             </audio>
-            
-            <ul id="audio-list" style="display:none">
-                
-                
-                <li title='0' data-url='/statics/Kenny G-Right here waiting.mp3'></li>
-                
-                    
-            </ul>
             
             
             
@@ -187,7 +206,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#This-is-my-blog"><span class="toc-number">1.</span> <span class="toc-text">This is my blog</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#hey-welcome-Floating-Rain-Blog"><span class="toc-number">1.1.</span> <span class="toc-text">hey welcome Floating Rain Blog</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#拖拽上传"><span class="toc-number">1.</span> <span class="toc-text">拖拽上传</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#目标"><span class="toc-number">1.1.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识内容"><span class="toc-number">1.2.</span> <span class="toc-text">知识内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#拖拽事件"><span class="toc-number">1.2.1.</span> <span class="toc-text">拖拽事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#拖拽上传-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">拖拽上传</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">1.3.</span> <span class="toc-text">总结</span></a></li></ol></li></ol>
                 </div>
             </div>
             
